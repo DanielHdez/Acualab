@@ -1,0 +1,36 @@
+#tabla{
+
+  padding: 2%;
+}
+.container{
+
+height: 700px;
+
+}
+
+
+table{
+	background-color: white;
+	
+}
+
+/*.table-wrapper-scroll-y {
+display: block;
+height: 500px;
+max-height: 400px;
+overflow-y: auto;
+-ms-overflow-style: -ms-autohiding-scrollbar;
+}*/
+
+table.dataTable thead .sorting:after,
+table.dataTable thead .sorting:before,
+table.dataTable thead .sorting_asc:after,
+table.dataTable thead .sorting_asc:before,
+table.dataTable thead .sorting_asc_disabled:after,
+table.dataTable thead .sorting_asc_disabled:before,
+table.dataTable thead .sorting_desc:after,
+table.dataTable thead .sorting_desc:before,
+table.dataTable thead .sorting_desc_disabled:after,
+table.dataTable thead .sorting_desc_disabled:before {
+bottom: 1.5em;
+}
