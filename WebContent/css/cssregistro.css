@@ -1,6 +1,6 @@
 html{
 	position: relative;
-	min-height: 100%; /*con esto la página ocupara siempre el 100% de la pantalla*/ 
+	min-height: 100%;
 	font-family: 'Poppins', sans-serif;
 
 }
