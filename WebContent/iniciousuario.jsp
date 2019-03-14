@@ -27,8 +27,9 @@
   </a>
   
   
+  
+  
 </nav>
-
 
 
 
@@ -69,33 +70,41 @@
 
 	    <div class="col-sm-4  text-center ">
 	      <form >
-	     	 <button id="botonproductos" formaction= "ventanahistorico.jsp" class="container2" type="submit"><img src="imagenes/productos.png"></button>
-			<br><br>
-	      <h2>Productos</h2>
-</form> 
+		     	 <button id="botonproductos" formaction= "ProductosTabla.jsp" class="container2" type="submit"><img src="imagenes/productos.png"></button>
+		  </form> 
+				<br>
+		     <h2>Productos</h2>
+			
     	</div>
 
 	</div>
 	<br><br><br>
 
-   <div class="row ">
-    <div class="col-sm-4 border">
-      <h3>Column 1</h3>
-      <p>Lorem ipsum dolor..</p>
-      <p>Ut enim ad..</p>
-    </div>
-    <div class="col-sm-4 border">
-      <h3>Column 2</h3>
-      <p>Lorem ipsum dolor..</p>
-      <p>Ut enim ad..</p>
-    </div>
-    <div class="col-sm-4 border">
-      <h3>Column 3</h3> 
-      <p>Lorem ipsum dolor..</p>
-      <p>Ut enim ad..</p>
-    </div>
-  </div>
-</div>
+		<div class="row ">
+			<div class="col-sm-4  text-center ">
+				<form>
+					<button id="botoninstrucciones" formaction="instrucciones.jsp"
+						class="container2" type="submit">
+						<img src="imagenes/instrucciones.png">
+					</button>
+				</form>
+				<br>
+				<h2>¿Qué medir?</h2>
+
+			</div>
+			<div class="col-sm-4 border d-none">
+				<h3>Column 2</h3>
+				<p>Lorem ipsum dolor..</p>
+				<p>Ut enim ad..</p>
+			</div>
+			<div class="col-sm-4 border d-none">
+				<h3>Column 3</h3>
+				<p>Lorem ipsum dolor..</p>
+				<p>Ut enim ad..</p>
+			</div>
+		</div>
+	</div>
+
 
 
 

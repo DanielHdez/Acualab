@@ -104,12 +104,13 @@
     </div>
 
     <div class="container">
-    <form >
-      <input type="text" placeholder="Enter Username" name="uname">
-      <input type="password" placeholder="Enter Password" name="psw">        
+    	<form >
+     	 <input type="text" placeholder="Enter Username" name="uname">
+     	 <input type="password" placeholder="Enter Password" name="psw">        
    		
 		<button formaction= "iniciousuario.jsp" class="container1" type="submit">Enviar</button>
-   	</form> 
+   		</form> 
+   		
    		<form >
          	<button  formaction= "formRegistro.jsp" class="container2" type="submit">Registro</button>
       	</form> 	
@@ -122,6 +123,7 @@
   </form>
   
 </div>
+
 
 
 
