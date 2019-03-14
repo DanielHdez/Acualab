@@ -22,14 +22,22 @@
 	  </a>
   
   	<ul class="navbar-nav  ">
+  	
+	  	<li class="nav-item pl-5">
+	     	 <a class="nav-link menu  " href="vennuevoanalisis.jsp"><span>Nuevo Análisis</span></a>
+	   		</li>
     	
    		<li class="nav-item pl-5">
-     	 <a class="nav-link menu" href="vennuevoanalisis.jsp">Nuevo Análisis</a>
+     	 <a class="nav-link menu" href="ventanahistorico.jsp">Historial</a>
    		</li>
     	<li class="nav-item pl-5">
      	 <a class="nav-link menu" href="ProductosTabla.jsp">Productos</a>
   		</li>
+  		<li class="nav-item pl-5">
+     	 <a class="nav-link menu" href="instrucciones.jsp">¿Qué Medir?</a>
+  		</li>
    	 </ul>
+
 	</nav>
 
 	<div class="row ">
