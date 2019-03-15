@@ -24,13 +24,14 @@ public class Controlador extends HttpServlet {
 	
 	private static final long serialVersionUID = 1L;
 	HttpSession sesion;
-	SQL sql;   
+	SQL sql; 
+	String nval = null,pval = null;
     @Override
 	public void init(ServletConfig config) throws ServletException {
 		super.init(config);
 		//Creo un objeto SQL que abre la conexion a labase de datos y me da acceso a los metodos de la clase SQL
 		// entre los cuales hay uno que me devuelve un resulset
-		this.sql=new SQL("jdbc:mysql://192.168.0.5:3306/acuario","acuario", "12345");
+		this.sql=new SQL("jdbc:mysql://miacuario.ddns.net:3306/acuario","acuario", "12345");
 		//Genero el contexto de la aplicacion y genero un atributo disponible en toda la aplicacion en la vida del servlet
 		//dicho objeto es sql que tiene parametros de conexion
 		ServletContext contextoAplicacion = this.getServletContext();
@@ -56,7 +57,6 @@ public class Controlador extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		RequestDispatcher rd;
-		String nval = null,pval = null;
 		sesion=request.getSession(true);
 		//Si el nombre es nulo  y la sesion no es nueva se obtiene el nombre de atributo de la sesion
 		//lo que me recupera los parametros y me deja entrar
@@ -64,53 +64,21 @@ public class Controlador extends HttpServlet {
 			nval = (String) sesion.getAttribute("nval");
 			pval= (String) sesion.getAttribute("pval");
 		}
+		System.out.println(nval+pval);
 		// si n es nulo y la sesion es nueva te lleva a login 
-		if (nval == null)
-			rd = request.getRequestDispatcher("/inicio.jsp");
+		if (nval == null) {
+			rd = request.getRequestDispatcher("/index.jsp");
 		
 		//si se cumple la condicion de registro  va a la página de home si no va a denegado 
-		else if (nval.equals("correcto") && pval.equals("correcto")) {
-			rd = request.getRequestDispatcher("/home.jsp");
+		}else if (nval.equals("correcto") && pval.equals("correcto")) {
+			rd = request.getRequestDispatcher("/iniciousuario.jsp");
 			//sesion.setAttribute("nombre", n); //Guardda el nombre en el atributo de sesion 			
 		}
 		else {
-			rd = request.getRequestDispatcher("/inicio.jsp");
+			rd = request.getRequestDispatcher("/index.jsp");
 			sesion.invalidate();//cierra la sesion
 		}
 		
-		ServletContext contextoAplicacion = this.getServletContext();
-		
-		//Aqui recupero el valor de nombre y password de la pestaña de login 
-		String n = request.getParameter("nombre");
-		String p = request.getParameter("pass");
-		
-		//ahora consulto en la base de datos si existe el nombre de usuario y contraseña
-		//Obtengo un objeto sql
-		SQL sql=(SQL) contextoAplicacion.getAttribute("conect");
-		
-				
-		
-		
-			//obtengo resulsetde la tabla de usuarios mediante el objeto sql 
-		try {
-			ResultSet rs= sql.getResulset("SELECT `Nombre`,`pass` FROM `usuarios`");
-			while (rs.next()) {
-					//comparo si el campo texto coincide con el de la base de datos 
-				if(n==rs.getString("Nombre")&&p==rs.getString("NOMBRE")) {
-						//meto los parametros en la sesion del servidor si se cumple la condicion 
-						sesion.setAttribute("nombre", n);
-						sesion.setAttribute("pass", p);
-						//Genero dos variables para validar el incio de sesion 
-						nval="correcto";
-						pval="correcto";
-						sesion.setAttribute("nval", nval);
-						sesion.setAttribute("pval", pval);
-				}
-			}
-		} catch (SQLException e) {
-				System.out.println("Error al realizar el listado de productos");
-				System.out.println(e.getMessage());
-			}
 		
 		rd.forward(request, response);
 

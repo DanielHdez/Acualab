@@ -7,6 +7,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="shortcut icon" href="imagenes/flat.png">
 <title>Nuevo análisis</title>
+	<link rel="stylesheet" type="text/css"
+		href="css/boot/bootstrap.min.css">
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	
+	<link rel="stylesheet" type="text/css"
+		href="/css/boot/datatables.min.css">
+	<script type="text/javascript" src="/js/datatables.min.js"></script>
+<script type="text/javascript" src="js/jquery-3.3.1.js"></script>
 <script type="text/javascript" src="js/script.js"></script>
 <link rel="stylesheet" type="text/css" href="css/cssanalisis.css">
 <link href="https://fonts.googleapis.com/css?family=Poppins"
@@ -203,13 +211,7 @@
 	</div>
 
 
-	<link rel="stylesheet" type="text/css"
-		href="css/boot/bootstrap.min.css">
-	<script type="text/javascript" src="js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="js/jquery-3.3.1.js"></script>
-	<link rel="stylesheet" type="text/css"
-		href="/css/boot/datatables.min.css">
-	<script type="text/javascript" src="/js/datatables.min.js"></script>
+
 
 </body>
 </html>
