@@ -47,7 +47,7 @@ public class Acceso extends HttpServlet {
 			ResultSet rs= sql.getResulset("SELECT `Nombre`,`pass` FROM `usuarios`");
 			while (rs.next()) {
 					//comparo si el campo texto coincide con el de la base de datos 
-				if(n==rs.getString("Nombre")&&p==rs.getString("NOMBRE")) {
+				if(n.equals(rs.getString("Nombre")) && p.equals(rs.getString("pass"))) {
 						//meto los parametros en la sesion del servidor si se cumple la condicion 
 						sesion.setAttribute("nombre", n);
 						sesion.setAttribute("pass", p);
