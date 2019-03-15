@@ -30,7 +30,7 @@ public class Controlador extends HttpServlet {
 		super.init(config);
 		//Creo un objeto SQL que abre la conexion a labase de datos y me da acceso a los metodos de la clase SQL
 		// entre los cuales hay uno que me devuelve un resulset
-		this.sql=new SQL("jdbc:mysql://192.168.0.5:3306/acuario","acuario", "12345");
+		this.sql=new SQL("jdbc:mysql://miacuario.ddns.net:3306/acuario","acuario", "12345");
 		//Genero el contexto de la aplicacion y genero un atributo disponible en toda la aplicacion en la vida del servlet
 		//dicho objeto es sql que tiene parametros de conexion
 		ServletContext contextoAplicacion = this.getServletContext();
@@ -64,17 +64,19 @@ public class Controlador extends HttpServlet {
 			nval = (String) sesion.getAttribute("nval");
 			pval= (String) sesion.getAttribute("pval");
 		}
+		 nval ="correcto";
+		 pval = "correcto";
 		// si n es nulo y la sesion es nueva te lleva a login 
-		if (nval == null)
-			rd = request.getRequestDispatcher("/inicio.jsp");
+		if (nval == null) {
+			rd = request.getRequestDispatcher("/index.jsp");
 		
 		//si se cumple la condicion de registro  va a la página de home si no va a denegado 
-		else if (nval.equals("correcto") && pval.equals("correcto")) {
-			rd = request.getRequestDispatcher("/home.jsp");
+		}else if (nval.equals("correcto") && pval.equals("correcto")) {
+			rd = request.getRequestDispatcher("/iniciousuario.jsp");
 			//sesion.setAttribute("nombre", n); //Guardda el nombre en el atributo de sesion 			
 		}
 		else {
-			rd = request.getRequestDispatcher("/inicio.jsp");
+			rd = request.getRequestDispatcher("/index.jsp");
 			sesion.invalidate();//cierra la sesion
 		}
 		
