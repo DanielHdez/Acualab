@@ -1,5 +1,9 @@
 Manifest-Version: 1.0
+<<<<<<< HEAD
 Built-By: admin
+=======
+Built-By: danca
+>>>>>>> da2bd1bd41762202dd62e787cb836d134bdf3e61
 Build-Jdk: 1.8.0_191
 Created-By: Maven Integration for Eclipse
 
