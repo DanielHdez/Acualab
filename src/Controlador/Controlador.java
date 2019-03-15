@@ -31,11 +31,58 @@ public class Controlador extends HttpServlet {
 		super.init(config);
 		//Creo un objeto SQL que abre la conexion a labase de datos y me da acceso a los metodos de la clase SQL
 		// entre los cuales hay uno que me devuelve un resulset
+		
+		//PAra servidor remoto
 		this.sql=new SQL("jdbc:mysql://miacuario.ddns.net:3306/acuario","acuario", "12345");
+		
+		//Para servidor LAN
+		//this.sql=new SQL("jdbc:mysql://192.168.0.5:3306/acuario","acuario", "12345");
+		
 		//Genero el contexto de la aplicacion y genero un atributo disponible en toda la aplicacion en la vida del servlet
 		//dicho objeto es sql que tiene parametros de conexion
 		ServletContext contextoAplicacion = this.getServletContext();
 		contextoAplicacion.setAttribute("conect", sql);
+		
+		/************************************Probando********************************************************************
+		String n,p;
+		n="Daniel";
+		p="0236";
+		try {
+		ResultSet rs= sql.getResulset("SELECT `Nombre`,`pass` FROM `usuarios`");
+		while (rs.next()) {
+			System.out.println(rs.getString("Nombre"));
+			System.out.println(n);
+			System.out.println(n.equals(rs.getString("Nombre")));
+			System.out.print(rs.getString("pass"));
+			System.out.println(p);
+			System.out.println(p.equals(rs.getString("pass")));
+			if(n.equals(rs.getString("Nombre")) && p.equals(rs.getString("pass"))) {
+				//sesion.setAttribute("nombre", n);
+				//sesion.setAttribute("pass", p);
+				//Genero dos variables para validar el incio de sesion 
+				nval="correcto";
+				pval="correcto";
+				//sesion.setAttribute("nval", nval);
+				//sesion.setAttribute("pval", pval);
+				System.out.println("Coincide algun registro");
+				
+			}else {
+				
+				System.out.println("noCoincide algun registro");
+			}
+
+			
+		}
+		} catch (SQLException e) {
+			System.out.println("Error al realizar el listado de productos");
+			System.out.println(e.getMessage());
+		}
+		
+		 /*****************************************************************************************************************/
+		
+		
+		
+		
 	}
 
 	@Override
@@ -57,7 +104,7 @@ public class Controlador extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		RequestDispatcher rd;
-		sesion=request.getSession(true);
+		//sesion=request.getSession(true);
 		//Si el nombre es nulo  y la sesion no es nueva se obtiene el nombre de atributo de la sesion
 		//lo que me recupera los parametros y me deja entrar
 		if (nval==null && !sesion.isNew()) {
