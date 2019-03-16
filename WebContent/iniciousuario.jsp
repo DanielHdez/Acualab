@@ -36,9 +36,12 @@
 <div class="container ">
   	<div class="row ">
 
-
+		
+		<%HttpSession sesion = request.getSession(false); %>
+		
+		
 		<div class="col-xs  pt-5 bienvenido">
-			<h1 class="bienvenido">Hola Nombre</h1> 
+			<h1 class="bienvenido">Hola <%=  String.valueOf(sesion.getAttribute("nombre"))  %></h1> 
 	   
 	      	
 		</div>

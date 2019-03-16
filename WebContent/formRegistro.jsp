@@ -21,6 +21,8 @@
 <body>
 
 	<title>Formulario de registro</title>
+
+
 </head>
 <body>
 	<header>
@@ -42,9 +44,18 @@
 
 		<form action="nombreServlet" class="col-sm-12  text-center">
 
+<%HttpSession sesion = request.getSession(false); 
+	
+if(String.valueOf(sesion.getAttribute("registrado")).equals("noregistrado")){ %>
+
+	<h1>Usuario no registrado</h1>
+	<h3>Por favor registrese</h3>
+	
+	<%}else{ %>
+	
 			<h1>
 				<span>Registro </span>
-			</h1>
+			</h1>						<%} %>
 			<div class="col-sm-12  text-center">
 				<label for="nombre"></label> <input type="text" name="nombre"
 					id="nombre" placeholder="Nombre" requiered>

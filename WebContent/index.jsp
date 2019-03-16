@@ -105,10 +105,15 @@
 
     <div class="container">
     	<form >
-     	 <input type="text" placeholder="Enter Username" name="uname">
-     	 <input type="password" placeholder="Enter Password" name="psw">        
+    	
+    	
+    		    	
+    	
+    	
+     	 <input type="text" placeholder="Enter Username" name="nombre">
+     	 <input type="password" placeholder="Enter Password" name="password">        
    		
-		<button formaction= "iniciousuario.jsp" class="container1" type="submit">Enviar</button>
+		<button formaction= "acceso" class="container1" type="submit">Enviar</button>
    		</form> 
    		
    		<form >
