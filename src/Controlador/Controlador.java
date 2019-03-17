@@ -88,7 +88,7 @@ public class Controlador extends HttpServlet {
 	@Override
 	public void destroy() {
 		sql.cerrarconexxion();
-		super.destroy();
+		super.destroy();//prueba2
 	}
 
 	/**
