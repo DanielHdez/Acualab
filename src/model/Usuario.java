@@ -2,6 +2,7 @@ package model;
 
 import java.io.Serializable;
 import javax.persistence.*;
+import java.util.List;
 
 
 /**
@@ -15,13 +16,13 @@ public class Usuario implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
-	private int idusuarios;
+	private String email;
 
 	private String apellidos;
 
 	private String ciudad;
 
-	private String email;
+	private int idusuarios;
 
 	private String nombre;
 
@@ -29,19 +30,19 @@ public class Usuario implements Serializable {
 
 	private String telefono;
 
-	//bi-directional one-to-one association to Analisi
-	@OneToOne(mappedBy="usuario")
-	private Analisi analisi;
+	//bi-directional many-to-one association to Analisi
+	@OneToMany(mappedBy="usuario")
+	private List<Analisi> analisis;
 
 	public Usuario() {
 	}
 
-	public int getIdusuarios() {
-		return this.idusuarios;
+	public String getEmail() {
+		return this.email;
 	}
 
-	public void setIdusuarios(int idusuarios) {
-		this.idusuarios = idusuarios;
+	public void setEmail(String email) {
+		this.email = email;
 	}
 
 	public String getApellidos() {
@@ -60,12 +61,12 @@ public class Usuario implements Serializable {
 		this.ciudad = ciudad;
 	}
 
-	public String getEmail() {
-		return this.email;
+	public int getIdusuarios() {
+		return this.idusuarios;
 	}
 
-	public void setEmail(String email) {
-		this.email = email;
+	public void setIdusuarios(int idusuarios) {
+		this.idusuarios = idusuarios;
 	}
 
 	public String getNombre() {
@@ -92,12 +93,26 @@ public class Usuario implements Serializable {
 		this.telefono = telefono;
 	}
 
-	public Analisi getAnalisi() {
-		return this.analisi;
+	public List<Analisi> getAnalisis() {
+		return this.analisis;
 	}
 
-	public void setAnalisi(Analisi analisi) {
-		this.analisi = analisi;
+	public void setAnalisis(List<Analisi> analisis) {
+		this.analisis = analisis;
+	}
+
+	public Analisi addAnalisi(Analisi analisi) {
+		getAnalisis().add(analisi);
+		analisi.setUsuario(this);
+
+		return analisi;
+	}
+
+	public Analisi removeAnalisi(Analisi analisi) {
+		getAnalisis().remove(analisi);
+		analisi.setUsuario(null);
+
+		return analisi;
 	}
 
 }

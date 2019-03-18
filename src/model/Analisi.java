@@ -18,7 +18,7 @@ public class Analisi implements Serializable {
 	@Id
 	private int idAnalisis;
 
-	private double k;
+	private float k;
 
 	private float nitratos;
 
@@ -30,9 +30,9 @@ public class Analisi implements Serializable {
 
 	private float temperatura;
 
-	//bi-directional one-to-one association to Usuario
-	@OneToOne
-	@JoinColumn(name="idAnalisis")
+	//bi-directional many-to-one association to Usuario
+	@ManyToOne
+	@JoinColumn(name="email")
 	private Usuario usuario;
 
 	//bi-directional many-to-many association to Producto
@@ -41,6 +41,22 @@ public class Analisi implements Serializable {
 
 	public Analisi() {
 	}
+	
+	
+
+	public Analisi(float k, float nitratos, float nitritos, String observaciones, float ph, float temperatura,
+			Usuario usuario) {
+		super();
+		this.k = k;
+		this.nitratos = nitratos;
+		this.nitritos = nitritos;
+		this.observaciones = observaciones;
+		this.ph = ph;
+		this.temperatura = temperatura;
+		this.usuario = usuario;
+	}
+
+
 
 	public int getIdAnalisis() {
 		return this.idAnalisis;
@@ -50,11 +66,11 @@ public class Analisi implements Serializable {
 		this.idAnalisis = idAnalisis;
 	}
 
-	public double getK() {
+	public float getK() {
 		return this.k;
 	}
 
-	public void setK(double k) {
+	public void setK(float k) {
 		this.k = k;
 	}
 
