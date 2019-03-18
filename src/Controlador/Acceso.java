@@ -17,7 +17,7 @@ import Conector.SQL;
 /**
  * Servlet implementation class cceso
  */
-@WebServlet("/cceso")
+@WebServlet("/acceso")
 public class Acceso extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	HttpSession sesion;
@@ -41,10 +41,10 @@ public class Acceso extends HttpServlet {
 		String p = request.getParameter("pass");
 		//ahora consulto en la base de datos si existe el nombre de usuario y contraseña
 		//Obtengo un objeto sql
-		SQL sql=(SQL) contextoAplicacion.getAttribute("conect");	
+		sql=(SQL) contextoAplicacion.getAttribute("conect");
 			//obtengo resulsetde la tabla de usuarios mediante el objeto sql 
 		try {
-			ResultSet rs= sql.getResulset("SELECT `Nombre`,`pass` FROM `usuarios`");
+			ResultSet rs= sql.getResulset("SELECT Nombre, pass FROM usuarios where Nombre="+ n + "pass=" + p);
 			while (rs.next()) {
 					//comparo si el campo texto coincide con el de la base de datos 
 				if(n.equals(rs.getString("Nombre")) && p.equals(rs.getString("pass"))) {

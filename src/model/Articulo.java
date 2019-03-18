@@ -1,20 +1,8 @@
 package model;
 
-import java.io.Serializable;
-import javax.persistence.*;
-import java.util.List;
+import java.util.Arrays;
 
-
-/**
- * The persistent class for the Producto database table.
- * 
- */
-@Entity
-@NamedQuery(name="Producto.findAll", query="SELECT p FROM Producto p")
-public class Producto implements Serializable {
-	private static final long serialVersionUID = 1L;
-
-	@Id
+public class Articulo {
 	private int idProducto;
 
 	private byte[] imagen;
@@ -31,24 +19,36 @@ public class Producto implements Serializable {
 
 	private String web;
 
-	//bi-directional many-to-many association to Analisi
-	@ManyToMany
-	@JoinTable(
-		name="Analisis_has_Producto"
-		, joinColumns={
-			@JoinColumn(name="Producto_idProducto")
-			}
-		, inverseJoinColumns={
-			@JoinColumn(name="Analisis_idAnalisis")
-			}
-		)
-	private List<Analisi> analisis;
-
-	public Producto() {
+	//Constructor
+	public Articulo(int idProducto, byte[] imagen, String marca, String nombre, String precio, String tipo, String uso,
+			String web) {
+		super();
+		this.idProducto = idProducto;
+		this.imagen = imagen;
+		this.marca = marca;
+		this.nombre = nombre;
+		this.precio = precio;
+		this.tipo = tipo;
+		this.uso = uso;
+		this.web = web;
 	}
 
+	public Articulo() {
+		// TODO Auto-generated constructor stub
+	}
+
+	//toString
+	@Override
+	public String toString() {
+		return "Articulo [idProducto=" + idProducto + ", imagen=" + Arrays.toString(imagen) + ", marca=" + marca
+				+ ", nombre=" + nombre + ", precio=" + precio + ", tipo=" + tipo + ", uso=" + uso + ", web=" + web
+				+ "]";
+	}
+
+	
+	//Getters and Setters
 	public int getIdProducto() {
-		return this.idProducto;
+		return idProducto;
 	}
 
 	public void setIdProducto(int idProducto) {
@@ -56,7 +56,7 @@ public class Producto implements Serializable {
 	}
 
 	public byte[] getImagen() {
-		return this.imagen;
+		return imagen;
 	}
 
 	public void setImagen(byte[] imagen) {
@@ -64,7 +64,7 @@ public class Producto implements Serializable {
 	}
 
 	public String getMarca() {
-		return this.marca;
+		return marca;
 	}
 
 	public void setMarca(String marca) {
@@ -72,7 +72,7 @@ public class Producto implements Serializable {
 	}
 
 	public String getNombre() {
-		return this.nombre;
+		return nombre;
 	}
 
 	public void setNombre(String nombre) {
@@ -80,7 +80,7 @@ public class Producto implements Serializable {
 	}
 
 	public String getPrecio() {
-		return this.precio;
+		return precio;
 	}
 
 	public void setPrecio(String precio) {
@@ -88,7 +88,7 @@ public class Producto implements Serializable {
 	}
 
 	public String getTipo() {
-		return this.tipo;
+		return tipo;
 	}
 
 	public void setTipo(String tipo) {
@@ -96,7 +96,7 @@ public class Producto implements Serializable {
 	}
 
 	public String getUso() {
-		return this.uso;
+		return uso;
 	}
 
 	public void setUso(String uso) {
@@ -104,19 +104,12 @@ public class Producto implements Serializable {
 	}
 
 	public String getWeb() {
-		return this.web;
+		return web;
 	}
 
 	public void setWeb(String web) {
 		this.web = web;
 	}
-
-	public List<Analisi> getAnalisis() {
-		return this.analisis;
-	}
-
-	public void setAnalisis(List<Analisi> analisis) {
-		this.analisis = analisis;
-	}
-
+	
+	
 }
