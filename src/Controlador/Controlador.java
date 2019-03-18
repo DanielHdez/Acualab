@@ -37,10 +37,10 @@ public class Controlador extends HttpServlet {
 		// entre los cuales hay uno que me devuelve un resulset
 		
 		//PAra servidor remoto
-		//this.sql=new SQL("jdbc:mysql://miacuario.ddns.net:3306/acuario","acuario", "12345");
+		this.sql=new SQL("jdbc:mysql://miacuario.ddns.net:3306/acuario","acuario", "12345");
 		
 		//Para servidor LAN
-		this.sql=new SQL("jdbc:mysql://192.168.0.5:3306/acuario","acuario", "12345");
+		//this.sql=new SQL("jdbc:mysql://192.168.0.5:3306/acuario","acuario", "12345");
 		
 		//Genero el contexto de la aplicacion y genero un atributo disponible en toda la aplicacion en la vida del servlet
 		//dicho objeto es sql que tiene parametros de conexion
@@ -142,7 +142,7 @@ public class Controlador extends HttpServlet {
 //System.out.println(" nval null y sesion nueva ...." +nval+pval + "  Nombre: "+name+ " Password: "+clave);
 			rd = request.getRequestDispatcher("/index.jsp");
 			
-		//si se cumple la condicion de registro  va a la p·gina de home si no va a denegado 
+		//si se cumple la condicion de registro  va a la p√°gina de home si no va a denegado 
 		}else if (nval.equals("correcto") && pval.equals("correcto")) {
 			
 //System.out.println(" nval correcto y pval correcto ...." +nval+pval + "  Nombre: "+name+ " Password: "+clave);		
