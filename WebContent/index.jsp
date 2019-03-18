@@ -94,7 +94,7 @@
 
 <div id="modal-wrapper" class="modal1">
   
-  <form class="modal-content animate" method="post >
+  <form class="modal-content animate" method="post" >
         
     <div class="imgcontainer">
       <span onclick="document.getElementById('modal-wrapper').style.display='none'" class="close" title="Close PopUp">&times;</span>

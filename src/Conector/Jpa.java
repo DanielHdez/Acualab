@@ -10,7 +10,6 @@ import javax.persistence.Persistence;
 import javax.persistence.TypedQuery;
 
 import model.Analisi;
-import model.Cliente;
 import model.Producto;
 import model.Usuario;
 
@@ -78,18 +77,6 @@ public class Jpa {
 			tx.commit();
 			return true; 
 		}
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		return mensaje;
-		
-		
-		
+
 	}
 }
