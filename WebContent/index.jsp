@@ -94,7 +94,7 @@
 
 <div id="modal-wrapper" class="modal1">
   
-  <form class="modal-content animate" action="/action_page.php">
+  <form class="modal-content animate" method="post">
         
     <div class="imgcontainer">
       <span onclick="document.getElementById('modal-wrapper').style.display='none'" class="close" title="Close PopUp">&times;</span>
@@ -104,7 +104,7 @@
     </div>
 
     <div class="container">
-    	<form >
+    	<form method="post" >
     	
     	
     		    	
@@ -113,7 +113,7 @@
      	 <input type="text" placeholder="Enter Username" name="nombre">
      	 <input type="password" placeholder="Enter Password" name="password">        
    		
-		<button formaction= "acceso" class="container1" type="submit">Enviar</button>
+		<button formaction= "acceso" class="container1" type="submit" >Enviar</button>
    		</form> 
    		
    		<form >

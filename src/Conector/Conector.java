@@ -26,7 +26,7 @@ public Conector(String cadenaConexion, String user, String pass) {
 // Establece un objeto conexion a la base de datos que decida 
 	public Connection cargardriver(String servidor, String user, String pass) {
 		try {
-			Class.forName("com.mysql.cj.jdbc.Driver");
+			Class.forName("com.mysql.jdbc.Driver");
 			System.out.println("El driver ha sido cargado");
 		} catch (ClassNotFoundException e) {
 			System.out.println("El driver No carga");
