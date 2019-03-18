@@ -116,7 +116,7 @@
 		<button formaction= "acceso" class="container1" type="submit">Enviar</button>
    		</form> 
    		
-   		<form method="post>
+   		<form method="post">
          	<button  formaction= "formRegistro.jsp" class="container2" type="submit">Registro</button>
       	</form> 	
      	
