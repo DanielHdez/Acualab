@@ -16,6 +16,7 @@
 	<script type="text/javascript" src="/js/datatables.min.js"></script>
 <script type="text/javascript" src="js/jquery-3.3.1.js"></script>
 <script type="text/javascript" src="js/script.js"></script>
+<script type="text/javascript" src="js/ajax1.js"></script>
 <link rel="stylesheet" type="text/css" href="css/cssanalisis.css">
 <link href="https://fonts.googleapis.com/css?family=Poppins"
 	rel="stylesheet">
@@ -156,22 +157,29 @@
 					<div class="col-md-9">
 						<div class="form-group">
 							<label for="comment">Comentario:</label>
-							<textarea class="form-control" rows="5" id="comment"></textarea>
+							<textarea class="form-control" rows="5" id="comment" name="coment"></textarea>
 						</div>
 					</div>
 				</div>
 
 				<div class="form-row ">
+				<div class="col-md-12 text-center">
 
+						<div id="resultado"></div>
+
+					</div>
+					<br>
+					<br>
 					<div class="col-md-12 text-center">
 
 						<button type="button" class="btna " value="informe" id="informe">Informe
 						</button>
 
-						<button type="button" class="btna ">Guardar</button>
+						<button type="button" id="comprobar" class="btna ">Guardar</button>
 
 
 					</div>
+					
 				</div>
 
 
@@ -198,20 +206,7 @@
 			</div>
 		</div>
 -->
-
-
-
-
-
-
-
-
-
-
 	</div>
-
-
-
 
 </body>
 </html>

@@ -10,6 +10,7 @@
 <link rel="shortcut icon" href="imagenes/flat.png">
 <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
 <script type="text/javascript" src="js/script1.js"></script>
+<script type="text/javascript" src="js/ajax1.js"></script>
 <link rel="stylesheet" type="text/css" href="css/boot/bootstrap.css">
 <link rel="stylesheet" type="text/css" href="css/cssregistro.css">
 <link href="https://fonts.googleapis.com/css?family=Poppins"
@@ -84,7 +85,10 @@ if(String.valueOf(sesion.getAttribute("registrado")).equals("noregistrado")){ %>
 			</div>
 			<br>
 			<br>
-			<br> <input type="button" name="alta–usuario" id="alta–usuario"
+			<div id="result"></div>
+			<br>
+			<br>
+			<br> <input type="button" name="altausuario" id="altausuario"
 				value="ENVIAR">
 		</form>
 	</section>
@@ -94,8 +98,8 @@ if(String.valueOf(sesion.getAttribute("registrado")).equals("noregistrado")){ %>
 	</footer>
 
 
-	<script src="js/jquery-3.2.1.slim.min.js"></script>
+	
 	<script src="js/popper.min.js"></script>
-	<script src="js/bootstrap.imn.js"></script>
+	<script src="js/bootstrap.min.js"></script>
 </body>
 </html>

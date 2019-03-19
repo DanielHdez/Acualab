@@ -9,6 +9,7 @@ import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
 import javax.persistence.TypedQuery;
 
+
 import model.Analisi;
 import model.Producto;
 import model.Usuario;
@@ -18,10 +19,12 @@ public class Jpa {
 	private EntityManager em;
 	private String mensaje;
 	Float ph,kh,nitri,nitra,tempe;
+	String nombre,apellido,ciudad,telefono,mailper,pass;  
+	
 	
 	public Jpa() {
 		try {
-			factory = Persistence.createEntityManagerFactory("ConvertirJPA");
+			factory = Persistence.createEntityManagerFactory("AcuarioProject");
 			em = factory.createEntityManager();
 			this.mensaje = "Hemos obtenido el EntityManager";
 
@@ -59,24 +62,46 @@ public class Jpa {
 		return salida;
 	}
 	
-	public boolean guardarnalisi(String Ph, String kh, String nitritos, String nitratos, String temp, String observaciones, String email) {
+	public boolean guardarnalisi(String Ph, String kh, String nitritos, String nitratos, String temp, String observaciones, String nombre) {
 		Analisi a;
 		this.ph=Float.parseFloat(Ph);
 		this.kh=Float.parseFloat(kh);
 		this.nitri=Float.parseFloat(nitritos);
 		this.nitra=Float.parseFloat(nitratos);
 		this.tempe=Float.parseFloat(temp);
-		Usuario usuario = em.find(Usuario.class, email);
+		Usuario usuario = em.find(Usuario.class,nombre);
+		System.out.println(usuario);
 		if(usuario ==null) {
 			return false;
 		}else {
 			a=new Analisi(this.kh, nitra, nitri, observaciones, ph, tempe, usuario);
+			try {
 			EntityTransaction tx = em.getTransaction();
 			tx.begin();
 			em.persist(a);
 			tx.commit();
 			return true; 
+			}catch (Exception e) {
+				e.printStackTrace();
+				return false;
+			}
 		}
 
 	}
+	
+	public boolean guardarusuario(String nombre, String apellidos, String ciudad, String telefono, String email, String pass) {
+		Usuario u;
+		u= new Usuario(email, apellidos, ciudad, nombre, pass, telefono);
+			try {
+			EntityTransaction tx = em.getTransaction();
+			tx.begin();
+			em.persist(u);
+			tx.commit();
+			return true; 
+			}catch (Exception e) {
+				e.printStackTrace();
+				return false;
+			}
+		}	
+	
 }
