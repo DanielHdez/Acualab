@@ -38,12 +38,9 @@ public class Analisi implements Serializable {
 	//bi-directional many-to-many association to Producto
 	@ManyToMany(mappedBy="analisis")
 	private List<Producto> productos;
-
-	public Analisi() {
-	}
 	
 	
-
+	
 	public Analisi(float k, float nitratos, float nitritos, String observaciones, float ph, float temperatura,
 			Usuario usuario) {
 		super();
@@ -56,7 +53,8 @@ public class Analisi implements Serializable {
 		this.usuario = usuario;
 	}
 
-
+	public Analisi() {
+	}
 
 	public int getIdAnalisis() {
 		return this.idAnalisis;
