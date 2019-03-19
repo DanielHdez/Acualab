@@ -4,7 +4,7 @@
 <html lang="es">
 <head>
 	<meta charset="UTF-8">
-	<title>¿Qué medir??</title>
+	<title>¿Qué medir?</title>
 	
 	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
 	
