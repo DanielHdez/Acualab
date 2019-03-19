@@ -9,11 +9,13 @@
 <title>Nuevo análisis</title>
 	<link rel="stylesheet" type="text/css"
 		href="css/boot/bootstrap.min.css">
-	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<!--<script type="text/javascript" src="js/bootstrap.min.js"></script>
 	
-	<link rel="stylesheet" type="text/css"
+	 <link rel="stylesheet" type="text/css"
 		href="/css/boot/datatables.min.css">
-	<script type="text/javascript" src="/js/datatables.min.js"></script>
+		
+	<script type="text/javascript" src="/js/datatables.min.js"></script>-->
+	
 <script type="text/javascript" src="js/jquery-3.3.1.js"></script>
 <script type="text/javascript" src="js/script.js"></script>
 <script type="text/javascript" src="js/ajax1.js"></script>
@@ -170,10 +172,10 @@
 					</div>
 					<br>
 					<br>
-					<div class="col-md-12 text-center">
+					<div class="col-md-12 text-center2">
 
 						<button type="button" class="btna " value="informe" id="informe">Informe
-						</button>
+						<a  href="#respuesta"/></button>
 
 						<button type="button" id="comprobar" class="btna ">Guardar</button>
 
@@ -185,27 +187,60 @@
 
 
 			</form>
-		</div>
+		<br>
+		<br><br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		
 
 
 
-<!--  
-		<div class="row ">
+ 
+		<div class="row mx-auto">
 
-			<div id="respuesta" class="col-sm-4 border">
+			<div id="respuesta" class="col-sm-6 border">
 				<h3>Column 2</h3>
 
 				
 				<p></p>
 				<p>Ut enim ad..</p>
 			</div>
-			<div class="col-sm-4 border">
+			<div class="col-sm-6 border">
 				<h3>Column 3</h3>
 				<p>Lorem ipsum dolor..</p>
 				<p>Ut enim ad..</p>
 			</div>
 		</div>
--->
+</div>
 	</div>
 
 </body>

@@ -1,28 +1,5 @@
 
-onload=iniciar;
 
-function iniciar(){
- usuario();
-}
-
-function usuario(){
-var a=1;
-var nombre="Paco";
-var texto="<a>Registro </a> / <a>Login</a>";
-if(a==1){
-	document.getElementById("log").innerHTML=texto;
-	cambiarimagen("imagenes/user.png");
-//	document.getElementById("log").innerHTML = "Paragraph changed!";
-}else{
-	document.getElementById("log").innerHTML="<a>Usario: "+nombre+"</a>";
-	cambiarimagen("imagenes/userreg.png");
-}
-}
-
-function cambiarimagen(img){
-
-	document.getElementById("imagenuser").src=img;
-}
 
 function range(){
 	 var a=document.getElementById("temran").value;
@@ -48,3 +25,20 @@ $('#mitabla').DataTable({
 $('.dataTables_length').addClass('bs-select');
 });
 
+
+$(document).ready(function() {
+	
+	$("#informe").click(function() {
+		alert("pulsaste informe");
+		
+	});
+	
+	$(function () {
+        $('#informe').bind("click", function () {
+            var dest = $("#respuesta").offset().top;
+            $("html, body").animate({scrollTop: dest});
+        });
+
+    });
+
+});

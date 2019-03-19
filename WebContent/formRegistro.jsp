@@ -43,7 +43,7 @@
 	<section class="container abajo">
 
 
-		<form action="nombreServlet" class="col-sm-12  text-center">
+		<form  class="col-sm-12  text-center">
 
 <%HttpSession sesion = request.getSession(false); 
 	
@@ -81,14 +81,14 @@ if(String.valueOf(sesion.getAttribute("registrado")).equals("noregistrado")){ %>
 
 			<div class="col-sm-12  text-center">
 				<label for="pass"></label> <input type="password" name="pass"
-					id="pass" placeholder="Password" requiered>
+					id="pass" placeholder="Password" required>
 			</div>
-			<br>
+			
 			<br>
 			<div id="result"></div>
+			
 			<br>
-			<br>
-			<br> <input type="button" name="altausuario" id="altausuario"
+			<br> <input type="button" name="altausuario" class="btna" id="altausuario"
 				value="ENVIAR">
 		</form>
 	</section>
