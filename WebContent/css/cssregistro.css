@@ -58,7 +58,20 @@ input[type="text"]{
 	font-size: 18px;
 	margin-top: 30px; 
 }
-
+input[type="email"]{
+	background-color: #ccebff;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	width: 350px;
+	height: 50px;
+	border: none;
+	text-align: center;
+	margin: 0;
+	
+	font-size: 18px;
+	margin-top: 30px; 
+}
 input[type="password"]{
 	background-color: #ccebff;
 	border-radius: 3px;

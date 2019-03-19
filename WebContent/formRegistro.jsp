@@ -59,24 +59,24 @@ if(String.valueOf(sesion.getAttribute("registrado")).equals("noregistrado")){ %>
 			</h1>						<%} %>
 			<div class="col-sm-12  text-center">
 				<label for="nombre"></label> <input type="text" name="nombre"
-					id="nombre" placeholder="Nombre" requiered>
+					id="nombre" placeholder="Nombre" required>
 			</div>
 
 			<div class="col-sm-12  text-center">
 				<label for="apellido"></label> <input type="text" name="apellido"
-					id="apellido" placeholder="Apellido" requiered>
+					id="apellido" placeholder="Apellido" required>
 			</div>
 			<div class="col-sm-12  text-center">
 				<label for="ciudad"></label> <input type="text" name="ciudad"
-					id="ciudad" placeholder="Ciudad" requiered>
+					id="ciudad" placeholder="Ciudad" required>
 			</div>
 			<div class="col-sm-12  text-center">
 				<label for="telefono"></label> <input type="text" name="telefono"
-					id="telefono" placeholder="Telefono" requiered>
+					id="telefono" placeholder="Telefono" required>
 			</div>
 			<div class="col-sm-12  text-center">
-				<label for="mail"></label> <input type="text" name="mailper"
-					id="mailper" placeholder="Email" requiered>
+				<label for="mail"></label> <input type="email" name="mailper"
+					id="mailper" placeholder="Email" required>
 			</div>
 
 			<div class="col-sm-12  text-center">

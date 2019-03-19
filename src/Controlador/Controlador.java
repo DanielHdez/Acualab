@@ -110,7 +110,7 @@ public class Controlador extends HttpServlet {
 		sesion=request.getSession(true);
 		nval = (String) sesion.getAttribute("nval");
 		pval= (String) sesion.getAttribute("pval");
-		name = (String) sesion.getAttribute("nombre");
+		name = (String) sesion.getAttribute("email");
 		clave= (String) sesion.getAttribute("password");
 		
 //System.out.println("1-Entro al controlador con nval= "+nval+" pval= "+pval+ "Nombre: "+name+" Pass: "+clave );		
@@ -123,7 +123,7 @@ public class Controlador extends HttpServlet {
 			
 			nval = (String) sesion.getAttribute("nval");
 			pval= (String) sesion.getAttribute("pval");
-			name = (String) sesion.getAttribute("nombre");
+			name = (String) sesion.getAttribute("email");
 			clave= (String) sesion.getAttribute("password");
 			
 			if(name==null) {

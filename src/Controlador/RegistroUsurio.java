@@ -48,9 +48,15 @@ public class RegistroUsurio extends HttpServlet {
 		response.setCharacterEncoding("UTF-8");
 		PrintWriter salida = response.getWriter();
 		if(par==true) {
-			salida.append("<p> Los datos se han guardado con éxito </p>");
+			sesion.setAttribute("email", mailper);
+			sesion.setAttribute("nombre",nombre);
+			sesion.setAttribute("password", pass);
+			sesion.setAttribute("nval", "correcto");
+			sesion.setAttribute("pval", "correcto");
+							
+			salida.append("<p> Usuario registrado con éxito </p><br><a href=\"Controlador\">Ir a home</a>");
 		}else {
-			salida.append("<p>No se han guardado los datos del análisis</p>");
+			salida.append("<p>El usuario ya existe</p>");
 		}
 
 	}
