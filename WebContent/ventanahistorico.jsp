@@ -455,6 +455,20 @@
 	<link rel="stylesheet" type="text/css" href="css/boot/datatables.min.css">
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="js/datatables.min.js"></script>
+	<script type="text/javascript">
+	
+	var requestURL = 'http://localhost:8080/AcuarioProject/Historico';
+    var request = new XMLHttpRequest();
+    request.open('GET', requestURL);
+    request.responseType = 'json';
+    request.send();
+
+    function cargarDatos()
+    {
+        var DatosJson = request.response;
+        document.getElementById("tabla").innerHTML=DatosJson;
+    }
+	</script>
 	
 </body>
 </html>

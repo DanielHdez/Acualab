@@ -13,7 +13,9 @@
 </head>
 <body>
   
-	
+<!-- <form>
+<input type="button" onclick="ptabla()" value="Activar Función">
+	</form> -->	
 	<nav class="navbar navbar-expand-sm ">
   
 	  <a class="navbar-brand pl-5" href="iniciousuario.jsp">
@@ -451,9 +453,36 @@
 
 	<link rel="stylesheet" type="text/css" href="css/boot/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/boot/datatables.min.css">
+	
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="js/datatables.min.js"></script>
+	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" >
+		<!-- function ptabla(){
+			var results="";
+			$.post("http://localhost:8080/AcuarioProject/Producto", function(data){
+				result=JSON.parse(data);
+	});
+			console.log(results);
+			
+		-->
+		var requestURL = 'http://localhost:8080/AcuarioProject/Producto';
+	    var request = new XMLHttpRequest();
+	    request.open('GET', requestURL);
+	    request.responseType = 'json';
+	    request.send();
+
+	    function cargarDatos()
+	    {
+	        var DatosJson = request.response;
+	        document.getElementById("tabla").innerHTML=DatosJson;
+	    }
+			
 	
+
+
+
+	</script>
 	
 </body>
 </html>
