@@ -13,16 +13,16 @@ import javax.servlet.http.HttpSession;
 import Conector.Jpa;
 
 /**
- * Servlet implementation class ControlAnalisis
+ * Servlet implementation class RegistroUsurio
  */
-@WebServlet("/ControlAnalisis")
-public class ControlAnalisis extends HttpServlet {
+@WebServlet("/RegistroUsurio")
+public class RegistroUsurio extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	String Ph ,kh, nitritos, nitratos, temp, observaciones, email;
+    String nombre,apellido,ciudad,telefono,mailper,pass;  
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public ControlAnalisis() {
+    public RegistroUsurio() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -31,20 +31,19 @@ public class ControlAnalisis extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
 		HttpSession sesion = request.getSession(false);
-		Ph = request.getParameter("ph");
-		kh = request.getParameter("dur");
-		nitritos = request.getParameter("no2");
-		nitratos = request.getParameter("no3");
-		temp = request.getParameter("tem");
-		observaciones = request.getParameter("coment");
-		System.out.println(Ph+"-"+kh+"-"+nitritos+"-"+nitratos+"-"+temp+"-"+observaciones);
+		nombre = request.getParameter("nombre");
+		apellido = request.getParameter("apellido");
+		ciudad = request.getParameter("ciudad");
+		telefono = request.getParameter("telefono");
+		mailper = request.getParameter("mailper");
+		pass = request.getParameter("pass");
+		//System.out.println(Ph+"-"+kh+"-"+nitritos+"-"+nitratos+"-"+temp+"-"+observaciones);
 		//Abro una entidad con JPA y accedo al metodo que devuelve un booleano si es correcto
 		Jpa nuevoanalisi=new Jpa();
-		String email=(String) sesion.getAttribute("email");
-		//System.out.println(email);
-		Boolean par=nuevoanalisi.guardarnalisi(Ph, kh, nitritos, nitratos, temp, observaciones, email);
+		//String nombreusuario=(String) sesion.getAttribute("nombre");
+		//System.out.println(nombreusuario);
+		Boolean par=nuevoanalisi.guardarusuario(nombre, apellido, ciudad, telefono, mailper, pass);
 		response.setContentType("text/html");
 		response.setCharacterEncoding("UTF-8");
 		PrintWriter salida = response.getWriter();
@@ -53,7 +52,7 @@ public class ControlAnalisis extends HttpServlet {
 		}else {
 			salida.append("<p>No se han guardado los datos del análisis</p>");
 		}
-		
+
 	}
 
 	/**

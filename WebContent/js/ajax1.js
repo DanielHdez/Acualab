@@ -20,12 +20,30 @@ $(document).ready(function () {
             }
         });
     });
+  
 });
-/**
- * Ph = request.getParameter("ph");
-		kh = request.getParameter("dur");
-		nitritos = request.getParameter("no2");
-		nitratos = request.getParameter("no3");
-		temp = request.getParameter("tem");
-		observaciones = request.getParameter("coment");
- */
+
+
+$(document).ready(function () {
+    $("#altausuario").click(function () {
+        var ruta = "RegistroUsurio"; //Servlet
+        var nombre = document.getElementById("nombre").value;
+        var apellido = document.getElementById("apellido").value;
+        var ciudad = document.getElementById("ciudad").value;
+        var telefono = document.getElementById("telefono").value;
+        var mailper = document.getElementById("mailper").value;
+        var pass = document.getElementById("pass").value;
+        var parametros = "?nombre=" + nombre + "&apellido=" + apellido + "&ciudad=" + ciudad + "&telefono=" + telefono + "&mailper=" + mailper + "&pass=" + pass;
+        ruta = ruta + parametros;
+        alert(ruta);
+        $.ajax({
+        	url: ruta,
+        	success: function(respuesta) {
+        		$("#result").html(respuesta);
+        	},
+        	error: function() {
+        		$("#resul").text("Error ajax");
+            }
+        });
+    });
+});

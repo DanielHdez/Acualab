@@ -34,6 +34,18 @@ public class Usuario implements Serializable {
 	@OneToMany(mappedBy="usuario")
 	private List<Analisi> analisis;
 
+	
+	
+	public Usuario(String email, String apellidos, String ciudad, String nombre, String pass, String telefono) {
+		super();
+		this.email = email;
+		this.apellidos = apellidos;
+		this.ciudad = ciudad;
+		this.nombre = nombre;
+		this.pass = pass;
+		this.telefono = telefono;
+	}
+
 	public Usuario() {
 	}
 

@@ -53,7 +53,7 @@ public class Acceso extends HttpServlet {
 			
 //	System.out.println("1 acabo de entrar a acceso");
 			
-			ResultSet rs= sql.getResulset("SELECT `Nombre`,`pass` FROM `usuarios`");
+			ResultSet rs= sql.getResulset("SELECT `email`,`pass`,`nombre` FROM `usuarios`");
 			
 			int i=0;
 			
@@ -66,11 +66,13 @@ public class Acceso extends HttpServlet {
 				
 	//comparo si el campo texto coincide con el de la base de datos 
 				
-				if(n.equals(rs.getString("Nombre")) && p.equals(rs.getString("pass"))) {
+				if(n.equals(rs.getString("email")) && p.equals(rs.getString("pass"))) {
 //	System.out.println("4 son iguales, entro en el if");
 	
 						//meto los parametros en la sesion del servidor si se cumple la condicion 
-						sesion.setAttribute("nombre", n);
+					   
+						sesion.setAttribute("email", n);
+						sesion.setAttribute("nombre", rs.getString("Nombre"));
 //	System.out.println("4.1 meto el nombre. "+n+" a la sesion");
 						sesion.setAttribute("password", p);
 //	System.out.println("4.2 meto el pass. "+p+" a la sesion");

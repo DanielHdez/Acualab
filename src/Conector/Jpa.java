@@ -8,7 +8,7 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
 import javax.persistence.TypedQuery;
-import javax.servlet.http.HttpSession;
+
 
 import model.Analisi;
 import model.Producto;
@@ -19,6 +19,7 @@ public class Jpa {
 	private EntityManager em;
 	private String mensaje;
 	Float ph,kh,nitri,nitra,tempe;
+	String nombre,apellido,ciudad,telefono,mailper,pass;  
 	
 	
 	public Jpa() {
@@ -87,4 +88,20 @@ public class Jpa {
 		}
 
 	}
+	
+	public boolean guardarusuario(String nombre, String apellidos, String ciudad, String telefono, String email, String pass) {
+		Usuario u;
+		u= new Usuario(email, apellidos, ciudad, nombre, pass, telefono);
+			try {
+			EntityTransaction tx = em.getTransaction();
+			tx.begin();
+			em.persist(u);
+			tx.commit();
+			return true; 
+			}catch (Exception e) {
+				e.printStackTrace();
+				return false;
+			}
+		}	
+	
 }

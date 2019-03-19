@@ -163,7 +163,13 @@
 				</div>
 
 				<div class="form-row ">
+				<div class="col-md-12 text-center">
 
+						<div id="resultado"></div>
+
+					</div>
+					<br>
+					<br>
 					<div class="col-md-12 text-center">
 
 						<button type="button" class="btna " value="informe" id="informe">Informe
@@ -173,7 +179,7 @@
 
 
 					</div>
-					<div id="resultado"></div>
+					
 				</div>
 
 
@@ -200,20 +206,7 @@
 			</div>
 		</div>
 -->
-
-
-
-
-
-
-
-
-
-
 	</div>
-
-
-
 
 </body>
 </html>
