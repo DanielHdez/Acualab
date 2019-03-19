@@ -91,13 +91,22 @@ public class Jpa {
 	
 	public boolean guardarusuario(String nombre, String apellidos, String ciudad, String telefono, String email, String pass) {
 		Usuario u;
-		u= new Usuario(email, apellidos, ciudad, nombre, pass, telefono);
-			try {
+		u = em.find(Usuario.class,nombre);
+		try {
+		if(u ==null) {
+			u= new Usuario(email, apellidos, ciudad, nombre, pass, telefono);
 			EntityTransaction tx = em.getTransaction();
 			tx.begin();
 			em.persist(u);
 			tx.commit();
+			
 			return true; 
+			
+		}else {
+			return false;
+			
+			}
+		
 			}catch (Exception e) {
 				e.printStackTrace();
 				return false;
