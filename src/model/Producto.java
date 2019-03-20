@@ -2,6 +2,7 @@ package model;
 
 import java.io.Serializable;
 import javax.persistence.*;
+import java.sql.Timestamp;
 import java.util.List;
 
 
@@ -10,12 +11,15 @@ import java.util.List;
  * 
  */
 @Entity
+@Table(name="Producto")
 @NamedQuery(name="Producto.findAll", query="SELECT p FROM Producto p")
 public class Producto implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
 	private int idProducto;
+
+	private Timestamp fecha;
 
 	private byte[] imagen;
 
@@ -53,6 +57,14 @@ public class Producto implements Serializable {
 
 	public void setIdProducto(int idProducto) {
 		this.idProducto = idProducto;
+	}
+
+	public Timestamp getFecha() {
+		return this.fecha;
+	}
+
+	public void setFecha(Timestamp fecha) {
+		this.fecha = fecha;
 	}
 
 	public byte[] getImagen() {

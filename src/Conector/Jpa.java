@@ -40,9 +40,32 @@ public class Jpa {
 	
 	public List<Producto> obtenerProductos() {
 		TypedQuery<Producto> query = em.createNamedQuery("Producto.findAll", Producto.class);
-		List<Producto> productos = query.getResultList();
+		List<Producto> productos = query.getResultList();		
 		return productos;
+		
 	}
+	
+	public String obtenerProductosstring() {
+		TypedQuery<Producto> query = em.createNamedQuery("Producto.findAll", Producto.class);
+		List<Producto> producto = query.getResultList();
+		String salida="";
+		for (Producto ana: producto) {
+			salida=salida+"<tr>";
+			salida=salida+"<td>"+ana.getTipo()+"</td>";
+			salida=salida+"<td>"+ana.getMarca()+"</td>";
+			salida=salida+"<td>"+ana.getNombre()+"</td>";
+			salida=salida+"<td>"+ana.getUso()+"</td>";
+			salida=salida+"<td>"+ana.getPrecio()+"</td>";
+			salida=salida+"<td>"+ana.getWeb()+"</td>";
+			salida=salida+"<td>"+ana.getImagen()+"</td>";
+			salida=salida+"</tr>";
+		}
+		
+		this.mensaje = "Hemos obtenido la tabla de Analisis";
+		return salida;
+		
+	}
+	
 	
 	public String ObtenerAnalisis() {
 		TypedQuery<Analisi> query = em.createNamedQuery("Analisi.findAll", Analisi.class);
@@ -51,11 +74,13 @@ public class Jpa {
 		String salida="";
 		for (Analisi ana: analisi) {
 			salida=salida+"<tr>";
+			salida=salida+"<td>"+ana.getFecha()+"</td>";
 			salida=salida+"<td>"+ana.getTemperatura()+"</td>";
 			salida=salida+"<td>"+ana.getPh()+"</td>";
 			salida=salida+"<td>"+ana.getNitritos()+"</td>";
 			salida=salida+"<td>"+ana.getNitratos()+"</td>";
 			salida=salida+"<td>"+ana.getK()+"</td>";
+			salida=salida+"<td>"+ana.getObservaciones()+"</td>";
 			salida=salida+"</tr>";
 		}
 		//salida=salida+"</table>";

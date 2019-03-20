@@ -34,6 +34,8 @@ public class Usuario implements Serializable {
 	@OneToMany(mappedBy="usuario")
 	private List<Analisi> analisis;
 
+	public Usuario() {
+	}
 	
 	
 	public Usuario(String email, String apellidos, String ciudad, String nombre, String pass, String telefono) {
@@ -46,8 +48,6 @@ public class Usuario implements Serializable {
 		this.telefono = telefono;
 	}
 
-	public Usuario() {
-	}
 
 	public String getEmail() {
 		return this.email;

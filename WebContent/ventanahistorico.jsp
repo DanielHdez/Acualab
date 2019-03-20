@@ -49,7 +49,7 @@
 			<h1 class="bienvenido">Historial de análisis</h1> 
 	   		</div>
 	      	
-			</div>
+	</div>
 
     <div id="tabla" class="row row-md abajomucho">
     	<div class="col-md-1">
@@ -72,39 +72,12 @@
 			   Jpa t=new Jpa();
 			   %> 
 			   <%= t.ObtenerAnalisis()%>			 
-			   <tr>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			  </tr>
-			   <tr>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			  </tr>
-			    <tr>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			  </tr>
+		
 			    </tbody>
 			  </table>
 			 </div>
 		</div>
-	</div>
-</div>
+
 
 	<link rel="stylesheet" type="text/css" href="css/boot/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/boot/datatables.min.css">

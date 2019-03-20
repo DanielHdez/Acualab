@@ -2,6 +2,7 @@ package model;
 
 import java.io.Serializable;
 import javax.persistence.*;
+import java.sql.Timestamp;
 import java.util.List;
 
 
@@ -17,6 +18,8 @@ public class Analisi implements Serializable {
 
 	@Id
 	private int idAnalisis;
+
+	private Timestamp fecha;
 
 	private float k;
 
@@ -38,8 +41,10 @@ public class Analisi implements Serializable {
 	//bi-directional many-to-many association to Producto
 	@ManyToMany(mappedBy="analisis")
 	private List<Producto> productos;
-	
-	
+
+	public Analisi() {
+	}
+
 	
 	public Analisi(float k, float nitratos, float nitritos, String observaciones, float ph, float temperatura,
 			Usuario usuario) {
@@ -53,8 +58,6 @@ public class Analisi implements Serializable {
 		this.usuario = usuario;
 	}
 
-	public Analisi() {
-	}
 
 	public int getIdAnalisis() {
 		return this.idAnalisis;
@@ -62,6 +65,14 @@ public class Analisi implements Serializable {
 
 	public void setIdAnalisis(int idAnalisis) {
 		this.idAnalisis = idAnalisis;
+	}
+
+	public Timestamp getFecha() {
+		return this.fecha;
+	}
+
+	public void setFecha(Timestamp fecha) {
+		this.fecha = fecha;
 	}
 
 	public float getK() {
