@@ -93,7 +93,7 @@
 					<div class="col-md-4">
 						<input type="range" class="align-middle"
 							class="form-control-range" onchange="cambiar('durran','dur')"
-							min="0" max="10" value="0" step="0.1" name="durran" id="durran">
+							min="0" max="10" value="0" step="1" name="durran" id="durran">
 					</div>
 
 				</div>
@@ -174,8 +174,7 @@
 					<br>
 					<div class="col-md-12 text-center2">
 
-						<button type="button" class="btna " value="informe" id="informe">Informe
-						<a  href="#respuesta"/></button>
+						<button type="button" class="btna " value="informe" id="informe">Informe</button>
 
 						<button type="button" id="comprobar" class="btna ">Guardar</button>
 
