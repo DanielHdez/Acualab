@@ -45,9 +45,10 @@ public class Jpa {
 	}
 	
 	public String ObtenerAnalisis() {
-		TypedQuery<Analisi> query = em.createNamedQuery("Cliente.findAll", Analisi.class);
+		TypedQuery<Analisi> query = em.createNamedQuery("Analisi.findAll", Analisi.class);
 		List<Analisi> analisi = query.getResultList();
-		String salida="<table>";
+		//String salida="<table>";
+		String salida="";
 		for (Analisi ana: analisi) {
 			salida=salida+"<tr>";
 			salida=salida+"<td>"+ana.getTemperatura()+"</td>";
@@ -57,7 +58,7 @@ public class Jpa {
 			salida=salida+"<td>"+ana.getK()+"</td>";
 			salida=salida+"</tr>";
 		}
-		salida=salida+"</table>";
+		//salida=salida+"</table>";
 		this.mensaje = "Hemos obtenido la tabla de Analisis";
 		return salida;
 	}

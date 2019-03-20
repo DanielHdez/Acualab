@@ -14,9 +14,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.google.gson.Gson;
-
 import Conector.SQL;
-import model.Articulo;
 import model.ParametrosHistorico;
 
 /**
@@ -57,8 +55,8 @@ public class Historico extends HttpServlet {
 		
 		response.setContentType("text/json");
 		response.setCharacterEncoding("UTF-8");
-		SQL sql = new SQL("jdbc:mysql://miacuario.ddns.net:3306/acuario", "acuario", "12345");
-		
+		//SQL sql = new SQL("jdbc:mysql://miacuario.ddns.net:3306/acuario", "acuario", "12345");
+		SQL sql=new SQL("jdbc:mysql://192.168.0.5:3306/acuario","acuario", "12345");
 		
 		ResultSet rs=sql.getResulset("Select * from Analisis" );
 		ArrayList <ParametrosHistorico>Historico = new ArrayList<ParametrosHistorico>();

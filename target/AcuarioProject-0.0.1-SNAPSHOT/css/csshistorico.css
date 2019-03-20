@@ -1,0 +1,85 @@
+
+html{
+  scroll-behavior: smooth;
+  position: relative;
+  min-height: 100%;
+  font-family: 'Poppins', sans-serif;
+  width: 100%; 
+  
+}
+body{
+
+  background-size: 100%;
+  margin: 0 0 125px;
+  width: 100%; 
+}
+
+nav{
+  
+  color: white;
+  background-color: rgba(0, 153, 255);
+  margin-top: 0;
+  height: auto;
+  }
+
+#logo{
+
+  width: 150px;
+}
+
+.menu{
+
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.abajomucho{
+
+	padding-top: 5%;
+}
+
+
+
+.container{
+
+height: 700px;
+
+}
+
+.thead-blue{
+
+	color: #fff;
+    background-color: rgba(0, 153, 255);
+    border-color: white;
+
+}
+
+
+.bienvenido{
+  font-size: 45px;
+  color:rgba(0, 153, 255);
+}
+
+table{
+	background-color: white;
+	
+}
+
+.alinear{
+text-align: center;
+
+}
+
+table.dataTable thead .sorting:after,
+table.dataTable thead .sorting:before,
+table.dataTable thead .sorting_asc:after,
+table.dataTable thead .sorting_asc:before,
+table.dataTable thead .sorting_asc_disabled:after,
+table.dataTable thead .sorting_asc_disabled:before,
+table.dataTable thead .sorting_desc:after,
+table.dataTable thead .sorting_desc:before,
+table.dataTable thead .sorting_desc_disabled:after,
+table.dataTable thead .sorting_desc_disabled:before {
+bottom: 1.5em;
+}

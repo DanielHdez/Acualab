@@ -1,0 +1,84 @@
+html{
+  scroll-behavior: smooth;
+  position: relative;
+  min-height: 100%;
+  font-family: 'Poppins', sans-serif;
+  width: 100%; 
+  
+}
+body{
+
+  background-size: 100%;
+  margin: 0 0 125px;
+  width: 100%; 
+}
+
+nav{
+  
+  color: white;
+  background-color: rgba(0, 153, 255);
+  margin-top: 0;
+  height: auto;
+  }
+
+#logo{
+
+  width: 150px;
+}
+
+.menu{
+
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.bienvenido{
+  font-size: 45px;
+  color:rgba(0, 153, 255);
+}
+
+form{
+  background-color: white  ;
+  padding-top: 1%;
+  font-weight: bold;
+}
+
+fieldset.scheduler-border {
+    border: 3px groove #ddd !important;
+    padding: 0 1.4em 1.4em 1.4em !important;
+    margin: 0 0 1.5em 0 !important;
+    -webkit-box-shadow:  0px 0px 0px 0px #000;
+            box-shadow:  0px 0px 0px 0px #000;
+    
+}
+
+legend.scheduler-border {
+    font-size: 1.2em !important;
+    font-weight: bold !important;
+    text-align: left !important;
+    border:none;
+    
+}
+
+
+.form-row{
+  padding: 2%;
+}
+
+.btna{
+  width: 250px;
+  height: 40px;
+  font-size: 20px;
+  margin-right: 20px;
+  background-color:rgba(0, 153, 255);
+  border: none;
+  color:white;
+  border-radius: 5px;
+  box-shadow: 0px 5px 5px 0px #006bb3;
+}
+.btna:hover{
+   background-color: #66c2ff;
+   box-shadow: 0px 5px 5px 0px #66c2ff;
+
+}
