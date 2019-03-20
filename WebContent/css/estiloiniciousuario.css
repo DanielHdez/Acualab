@@ -45,20 +45,8 @@ button img{
 	width: 100px;
 
 }
-#botonanalisis{
-background-color: transparent;
-border: none;
-}
-#botonproductos{
-background-color: transparent;
-border: none;
-}
-#botonhistorial{
-background-color: transparent;
-border: none;
-}
 
-#botoninstrucciones{
+.botonesimagenes{
 background-color: transparent;
 border: none;
 }

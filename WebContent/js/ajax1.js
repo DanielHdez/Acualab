@@ -1,4 +1,4 @@
-/*$(document).ready(function () {
+$(document).ready(function () {
     $("#comprobar").click(function () {
         var ruta = "ControlAnalisis"; //Servlet
         var Ph = document.getElementById("ph").value;
@@ -9,7 +9,6 @@
         var observaciones = document.getElementById("comment").value;
         var parametros = "?ph=" + Ph + "&dur=" + kh + "&no2=" + nitritos + "&no3=" + nitratos + "&tem=" + temp + "&coment=" + observaciones;
         ruta = ruta + parametros;
-        alert(ruta);
         $.ajax({
         	url: ruta,
         	success: function(respuesta) {
@@ -21,7 +20,7 @@
         });
     });
   
-});*/
+});
 
 
 $(document).ready(function () {

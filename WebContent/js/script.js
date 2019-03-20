@@ -25,21 +25,3 @@ $('#mitabla').DataTable({
 $('.dataTables_length').addClass('bs-select');
 });
 
-
-$(document).ready(function() {
-	
-	$("#informe").click(function() {
-		alert("pulsaste informe");
-		var ph = $("#ph").val();
-		alert(ph);
-	});
-	
-	$(function () {
-        $('#informe').bind("click", function () {
-            var dest = $("#respuesta").offset().top;
-            $("html, body").animate({scrollTop: dest});
-        });
-
-    });
-
-});
