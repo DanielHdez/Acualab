@@ -30,7 +30,8 @@ $(document).ready(function() {
 	
 	$("#informe").click(function() {
 		alert("pulsaste informe");
-		
+		var ph = $("#ph").val();
+		alert(ph);
 	});
 	
 	$(function () {

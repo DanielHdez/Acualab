@@ -16,13 +16,13 @@
         		$("#resultado").html(respuesta);
         	},
         	error: function() {
-        		$("#resultado").text("Error ajax");
+        		$("#resultado").text("Error ajax1");
             }
         });
     });
   
-});
-*/
+});*/
+
 
 $(document).ready(function () {
     $("#altausuario").click(function () {
@@ -42,7 +42,7 @@ $(document).ready(function () {
         		$("#result").html(respuesta);
         	},
         	error: function() {
-        		$("#resul").text("Error ajax");
+        		$("#resul").text("Error ajax2");
             }
         });
     });
