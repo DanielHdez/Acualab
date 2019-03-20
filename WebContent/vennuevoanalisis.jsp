@@ -48,7 +48,6 @@
 		</ul>
 	</nav>
 
-
 	<div class="row">
 		<div class="col-2"></div>
 		<div class="col-sm-8">
@@ -58,7 +57,7 @@
 
 
 					<div class="col-xs-12  mx-auto bienvenido pt-5">
-						<h1 class="bienvenido">Nuevo Analisis</h1>
+						<h1 class="bienvenido">Nuevo Análisis</h1>
 					</div>
 
 				</div>
@@ -104,7 +103,7 @@
 						<span class="label label-default">NO2(mg/l)</span>
 					</div>
 					<div class="col-md-4">
-						<input type="number" min="0" max="0.4" step="0.01"
+						<input type="number" min="0" max="0.3" step="0.01"
 							onchange="cambiar('no2','no2ran')"
 							class="form-control form-control-sm" id="no2"
 							placeholder="Concentración de nitritos" name="no2">
@@ -112,7 +111,7 @@
 					<div class="col-md-4">
 						<input type="range" class="align-middle"
 							class="form-control-range" onchange="cambiar('no2ran','no2')"
-							min="0" max="0.4" value="0" step="0.01" name="no2ran" id="no2ran">
+							min="0" max="0.3" value="0" step="0.01" name="no2ran" id="no2ran">
 					</div>
 				</div>
 				<div class="form-row">
@@ -186,58 +185,27 @@
 
 
 			</form>
-		<br>
-		<br><br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
+	
+		<br><br><br><br><br><br>
 		
-
-
-
  
-		<div class="row mx-auto">
+		<div class="row mx-auto text-center textov">
 
-			<div id="respuesta" class="col-sm-6 border">
-				<h3>Column 2</h3>
+			<div id="respuestaph" class="col-sm-12">
+			</div>
+			
+			<div id="respuestakh" class="col-sm-12">
+			</div>
 
-				
-				<p></p>
-				<p>Ut enim ad..</p>
+			<div id="respuestano2" class="col-sm-12">
 			</div>
-			<div class="col-sm-6 border">
-				<h3>Column 3</h3>
-				<p>Lorem ipsum dolor..</p>
-				<p>Ut enim ad..</p>
+			<div id="respuestano3" class="col-sm-12">
 			</div>
+			<div id="respuestatemp" class="col-sm-12">
+			</div>
+
+
+
 		</div>
 </div>
 	</div>

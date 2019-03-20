@@ -50,7 +50,7 @@
 	    <div class="col-sm-4  text-center">
 	      
 			<form >
-         	<button id="botonanalisis" formaction= "vennuevoanalisis.jsp" class="container2" type="submit"><img src="imagenes/nuevoanalisis.png"></button>
+         	<button id="botonanalisis" class="botonesimagenes" formaction= "vennuevoanalisis.jsp" class="container2" type="submit"><img src="imagenes/nuevoanalisis.png"></button>
       		</form> 	
 
 			<br>
@@ -63,7 +63,7 @@
 	    <div class="col-sm-4  text-center">
 	      
 			<form >
-         	<button id="botonhistorial" formaction= "ventanahistorico.jsp" class="container2" type="submit"><img src="imagenes/historial.png"></button>
+         	<button id="botonhistorial" class="botonesimagenes" formaction= "ventanahistorico.jsp" class="container2" type="submit"><img src="imagenes/historial.png"></button>
       		</form> 
 
 	      <br>
@@ -73,7 +73,7 @@
 
 	    <div class="col-sm-4  text-center ">
 	      <form >
-		     	 <button id="botonproductos" formaction= "ProductosTabla.jsp" class="container2" type="submit"><img src="imagenes/productos.png"></button>
+		     	 <button id="botonproductos" class="botonesimagenes" formaction= "ProductosTabla.jsp" class="container2" type="submit"><img src="imagenes/productos.png"></button>
 		  </form> 
 				<br>
 		     <h2>Productos</h2>
@@ -86,7 +86,7 @@
 		<div class="row ">
 			<div class="col-sm-4  text-center ">
 				<form>
-					<button id="botoninstrucciones" formaction="instrucciones.jsp"
+					<button id="botoninstrucciones" class="botonesimagenes" formaction="instrucciones.jsp"
 						class="container2" type="submit">
 						<img src="imagenes/instrucciones.png">
 					</button>
@@ -95,11 +95,20 @@
 				<h2>¿Qué medir?</h2>
 
 			</div>
-			<div class="col-sm-4 border d-none">
-				<h3>Column 2</h3>
-				<p>Lorem ipsum dolor..</p>
-				<p>Ut enim ad..</p>
+			
+			
+			<div class="col-sm-4  text-center ">
+				<form>
+					<button id="botongraficas" class="botonesimagenes" formaction="graficas.jsp"
+						class="container2" type="submit">
+						<img src="imagenes/graficas.png">
+					</button>
+				</form>
+				<br>
+				<h2>Gráficas</h2>
+
 			</div>
+			
 			<div class="col-sm-4 border d-none">
 				<h3>Column 3</h3>
 				<p>Lorem ipsum dolor..</p>
