@@ -1,4 +1,4 @@
-$(document).ready(function () {
+/*$(document).ready(function () {
     $("#comprobar").click(function () {
         var ruta = "ControlAnalisis"; //Servlet
         var Ph = document.getElementById("ph").value;
@@ -22,7 +22,7 @@ $(document).ready(function () {
     });
   
 });
-
+*/
 
 $(document).ready(function () {
     $("#altausuario").click(function () {

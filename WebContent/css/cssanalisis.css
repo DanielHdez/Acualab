@@ -38,6 +38,12 @@ nav{
   color:rgba(0, 153, 255);
 }
 
+
+.text-center2 {
+    text-align: center!important;
+
+    margin-left: 5%;
+}
 form{
   background-color: white  ;
   padding-top: 1%;
