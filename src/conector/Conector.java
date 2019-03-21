@@ -1,5 +1,5 @@
 
-package Conector;
+package conector;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

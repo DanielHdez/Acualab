@@ -1,4 +1,4 @@
-package Controlador;
+package controlador;
 
 import java.io.IOException;
 import javax.servlet.RequestDispatcher;
@@ -11,8 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-
-import Conector.SQL;
+import conector.SQL;
 
 /**
  * Servlet implementation class Controlador

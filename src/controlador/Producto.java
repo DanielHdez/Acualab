@@ -1,4 +1,4 @@
-package Controlador;
+package controlador;
 
 
 import java.io.IOException;
@@ -11,7 +11,8 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import Conector.SQL;
+
+import conector.SQL;
 
 /**
  * Servlet implementation class Producto

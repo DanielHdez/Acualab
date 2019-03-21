@@ -1,4 +1,4 @@
-package Controlador;
+package controlador;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -15,7 +15,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.google.gson.Gson;
 
-import Conector.SQL;
+import conector.SQL;
 import model.Articulo;
 
 /**

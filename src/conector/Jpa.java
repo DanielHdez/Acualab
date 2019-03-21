@@ -1,4 +1,4 @@
-package Conector;
+package conector;
 
 import java.util.List;
 
