@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="UTF-8"%>
+ <%@ page import= "Conector.Jpa" %> 
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -13,9 +14,7 @@
 </head>
 <body>
   
-<!-- <form>
-<input type="button" onclick="ptabla()" value="Activar Función">
-	</form> -->	
+	
 	<nav class="navbar navbar-expand-sm ">
   
 	  <a class="navbar-brand pl-5" href="iniciousuario.jsp">
@@ -47,7 +46,7 @@
 			<h1 class="bienvenido">Productos</h1> 
 	   		</div>
 	      	
-			</div>
+	</div>
 
     <div id="tabla" class="row row-md abajomucho">
     	<div class="col-md-1">
@@ -56,433 +55,31 @@
 		  <table id="mitabla" class="table alinear table-bordered table-md" cellspacing="0" width="100%">
 		    <thead class="thead-blue " >
 		      <tr>
-		        <th scope="col ">Fecha</th>
-		        <th scope="col">Temperatura</th>
-		        <th scope="col">PH</th>
-		        <th scope="col">Nitritos</th>
-		        <th scope="col">Nitratos</th>
-		        <th scope="col">Dureza</th>
-		        <th scope="col">Comentario</th>
+		        <th scope="col ">Tipo</th>
+		        <th scope="col">Marca</th>
+		        <th scope="col">Nombre</th>
+		        <th scope="col">Uso</th>
+		        <th scope="col">Precio</th>
+		        <th scope="col">web</th>
+		        <th scope="col">Imagen</th>
 		     </tr>
 			</thead>
 			<tbody id="datos">
-			    <tr>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			  </tr>
-			    <tr>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			  </tr>
-			    <tr>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			  </tr>
-			    <tr>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			  </tr>
-			    <tr>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			  </tr>
-			   <tr>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			  </tr>
-			    <tr>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			  </tr>
-			  <tr>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			  </tr>
-			    <tr>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			  </tr>
-			    <tr>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			  </tr>
-			    <tr>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			  </tr>
-			    <tr>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			  </tr>
-			   <tr>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			  </tr>
-			    <tr>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			  </tr>
-			    <tr>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			  </tr>
-			    <tr>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			  </tr>
-			    <tr>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			  </tr>
-			    <tr>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			  </tr>
-			    <tr>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			  </tr>
-			   <tr>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			  </tr>
-			    <tr>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			  </tr>
-			  <tr>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			  </tr>
-			    <tr>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			  </tr>
-			    <tr>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			  </tr>
-			    <tr>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			  </tr>
-			    <tr>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			  </tr>
-			   <tr>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			  </tr>
-			    <tr>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			  </tr>
-			  <tr>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			  </tr>
-			    <tr>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			  </tr>
-			    <tr>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			  </tr>
-			    <tr>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			  </tr>
-			    <tr>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			  </tr>
-			   <tr>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			  </tr>
-			    <tr>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			  </tr>
-			  <tr>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			  </tr>
-			    <tr>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			  </tr>
-			    <tr>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			  </tr>
-			    <tr>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			  </tr>
-			    <tr>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			  </tr>
-			   <tr>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			  </tr>
-			    <tr>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			  </tr>
+			      <%
+			   Jpa t=new Jpa();
+			   %> 
+			   <%=t.obtenerProductosstring()%>
 			    </tbody>
 			  </table>
 			 </div>
 		</div>
-	</div>
-</div>
+
 
 	<link rel="stylesheet" type="text/css" href="css/boot/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/boot/datatables.min.css">
-	
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="js/datatables.min.js"></script>
-	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
-	<script type="text/javascript" >
-		<!-- function ptabla(){
-			var results="";
-			$.post("http://localhost:8080/AcuarioProject/Producto", function(data){
-				result=JSON.parse(data);
-	});
-			console.log(results);
-			
-		-->
-		var requestURL = 'http://localhost:8080/AcuarioProject/Producto';
-	    var request = new XMLHttpRequest();
-	    request.open('GET', requestURL);
-	    request.responseType = 'json';
-	    request.send();
-
-	    function cargarDatos()
-	    {
-	        var DatosJson = request.response;
-	        document.getElementById("tabla").innerHTML=DatosJson;
-	    }
-			
 	
-
-
-
-	</script>
 	
 </body>
 </html>

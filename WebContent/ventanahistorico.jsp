@@ -71,8 +71,8 @@
 			   <%
 			   Jpa t=new Jpa();
 			   %> 
-			   <%= t.ObtenerAnalisis()%>			 
-		
+			   			 
+				<%= t.ObtenerAnalisis((String) session.getAttribute("email")) %>
 			    </tbody>
 			  </table>
 			 </div>

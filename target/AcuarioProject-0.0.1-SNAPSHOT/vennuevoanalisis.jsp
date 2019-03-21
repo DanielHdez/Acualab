@@ -9,13 +9,16 @@
 <title>Nuevo análisis</title>
 	<link rel="stylesheet" type="text/css"
 		href="css/boot/bootstrap.min.css">
-	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<!--<script type="text/javascript" src="js/bootstrap.min.js"></script>
 	
-	<link rel="stylesheet" type="text/css"
+	 <link rel="stylesheet" type="text/css"
 		href="/css/boot/datatables.min.css">
-	<script type="text/javascript" src="/js/datatables.min.js"></script>
+		
+	<script type="text/javascript" src="/js/datatables.min.js"></script>-->
+	
 <script type="text/javascript" src="js/jquery-3.3.1.js"></script>
 <script type="text/javascript" src="js/script.js"></script>
+<script type="text/javascript" src="js/ajax1.js"></script>
 <link rel="stylesheet" type="text/css" href="css/cssanalisis.css">
 <link href="https://fonts.googleapis.com/css?family=Poppins"
 	rel="stylesheet">
@@ -45,7 +48,6 @@
 		</ul>
 	</nav>
 
-
 	<div class="row">
 		<div class="col-2"></div>
 		<div class="col-sm-8">
@@ -55,7 +57,7 @@
 
 
 					<div class="col-xs-12  mx-auto bienvenido pt-5">
-						<h1 class="bienvenido">Nuevo Analisis</h1>
+						<h1 class="bienvenido">Nuevo Análisis</h1>
 					</div>
 
 				</div>
@@ -90,7 +92,7 @@
 					<div class="col-md-4">
 						<input type="range" class="align-middle"
 							class="form-control-range" onchange="cambiar('durran','dur')"
-							min="0" max="10" value="0" step="0.1" name="durran" id="durran">
+							min="0" max="10" value="0" step="1" name="durran" id="durran">
 					</div>
 
 				</div>
@@ -101,7 +103,7 @@
 						<span class="label label-default">NO2(mg/l)</span>
 					</div>
 					<div class="col-md-4">
-						<input type="number" min="0" max="0.4" step="0.01"
+						<input type="number" min="0" max="0.3" step="0.01"
 							onchange="cambiar('no2','no2ran')"
 							class="form-control form-control-sm" id="no2"
 							placeholder="Concentración de nitritos" name="no2">
@@ -109,7 +111,7 @@
 					<div class="col-md-4">
 						<input type="range" class="align-middle"
 							class="form-control-range" onchange="cambiar('no2ran','no2')"
-							min="0" max="0.4" value="0" step="0.01" name="no2ran" id="no2ran">
+							min="0" max="0.3" value="0" step="0.01" name="no2ran" id="no2ran">
 					</div>
 				</div>
 				<div class="form-row">
@@ -156,62 +158,57 @@
 					<div class="col-md-9">
 						<div class="form-group">
 							<label for="comment">Comentario:</label>
-							<textarea class="form-control" rows="5" id="comment"></textarea>
+							<textarea class="form-control" rows="5" id="comment" name="coment"></textarea>
 						</div>
 					</div>
 				</div>
 
 				<div class="form-row ">
+				<div class="col-md-12 text-center">
 
-					<div class="col-md-12 text-center">
+						<div id="resultado"></div>
 
-						<button type="button" class="btna " value="informe" id="informe">Informe
-						</button>
+					</div>
+					<br>
+					<br>
+					<div class="col-md-12 text-center2">
 
-						<button type="button" class="btna ">Guardar</button>
+						<button type="button" class="btna " value="informe" id="informe">Informe</button>
+
+						<button type="button" id="comprobar" class="btna ">Guardar</button>
 
 
 					</div>
+					
 				</div>
 
 
 
 			</form>
-		</div>
+	
+		<br><br><br><br><br><br>
+		
+ 
+		<div class="row mx-auto text-center textov">
 
-
-
-<!--  
-		<div class="row ">
-
-			<div id="respuesta" class="col-sm-4 border">
-				<h3>Column 2</h3>
-
-				
-				<p></p>
-				<p>Ut enim ad..</p>
+			<div id="respuestaph" class="col-sm-12">
 			</div>
-			<div class="col-sm-4 border">
-				<h3>Column 3</h3>
-				<p>Lorem ipsum dolor..</p>
-				<p>Ut enim ad..</p>
+			
+			<div id="respuestakh" class="col-sm-12">
 			</div>
+
+			<div id="respuestano2" class="col-sm-12">
+			</div>
+			<div id="respuestano3" class="col-sm-12">
+			</div>
+			<div id="respuestatemp" class="col-sm-12">
+			</div>
+
+
+
 		</div>
--->
-
-
-
-
-
-
-
-
-
-
+</div>
 	</div>
-
-
-
 
 </body>
 </html>

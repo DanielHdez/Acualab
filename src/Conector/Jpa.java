@@ -8,7 +8,8 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
 import javax.persistence.TypedQuery;
-
+import javax.servlet.ServletContext;
+import javax.servlet.http.HttpSession;
 
 import model.Analisi;
 import model.Producto;
@@ -67,9 +68,14 @@ public class Jpa {
 	}
 	
 	
-	public String ObtenerAnalisis() {
-		TypedQuery<Analisi> query = em.createNamedQuery("Analisi.findAll", Analisi.class);
-		List<Analisi> analisi = query.getResultList();
+	public String ObtenerAnalisis(String nombre) {
+		
+		
+		Usuario usuario = em.find(Usuario.class,nombre);
+		if(usuario!=null) {
+		TypedQuery<Analisi> query = em.createQuery("Select ana from Analisi ana Where ana.usuario.email = '" + nombre + "'", Analisi.class);
+		List<Analisi> analisi = query.getResultList();	
+		System.out.println(usuario);
 		//String salida="<table>";
 		String salida="";
 		for (Analisi ana: analisi) {
@@ -83,14 +89,16 @@ public class Jpa {
 			salida=salida+"<td>"+ana.getObservaciones()+"</td>";
 			salida=salida+"</tr>";
 		}
+		
 		//salida=salida+"</table>";
 		this.mensaje = "Hemos obtenido la tabla de Analisis";
 		return salida;
-	}
+		}else {
+		return "";}}
 	
-	public boolean guardarnalisi(String Ph, String kh, String nitritos, String nitratos, String temp, String observaciones, String nombre) {
+	public boolean guardarnalisi(String ph, String kh, String nitritos, String nitratos, String temp, String observaciones, String nombre) {
 		Analisi a;
-		this.ph=Float.parseFloat(Ph);
+		this.ph=Float.parseFloat(ph);
 		this.kh=Float.parseFloat(kh);
 		this.nitri=Float.parseFloat(nitritos);
 		this.nitra=Float.parseFloat(nitratos);
@@ -100,7 +108,7 @@ public class Jpa {
 		if(usuario ==null) {
 			return false;
 		}else {
-			a=new Analisi(this.kh, nitra, nitri, observaciones, ph, tempe, usuario);
+			a=new Analisi(this.kh, nitra, nitri, observaciones, this.ph, tempe, usuario);
 			try {
 			EntityTransaction tx = em.getTransaction();
 			tx.begin();
