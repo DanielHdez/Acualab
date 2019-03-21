@@ -1,10 +1,10 @@
 onload=graficos;
 function graficos(){
-
-	grafico("popChart");
-	grafico2("popChart1");
-	grafico("popChart2");
-	grafico3("speedChart");
+	grafico3("popChart1");
+	grafico2("popChart", "Temperatura");
+	grafico5("popChart2", "PH");
+	grafico4("speedChart");
+	
   recibir();
 }
   
@@ -20,6 +20,7 @@ function recibir(){
               alert(json);
             }else{
               document.getElementById("resultado").innerHTML = "Error AJAX";
+              
             }
         }
       }
@@ -76,17 +77,17 @@ var barChart = new Chart(popCanvas, {
   }
 });
 }
-function grafico2(graf){
+function grafico2(graf, titulo){
 var speedCanvas = document.getElementById(graf);
 
 Chart.defaults.global.defaultFontFamily = "Lato";
 Chart.defaults.global.defaultFontSize = 18;
 
 var speedData = {
-  labels: ["0s", "10s", "20s", "30s", "40s", "50s", "60s"],
+  labels: ["01/3", "02/03", "03/03", "04/03", "05/03", "10/03", "20/03"],
   datasets: [{
-    label: "Car Speed (mph)",
-    data: [0, 59, 75, 20, 20, 55, 40],
+    label:titulo,
+    data: [20, 22, 19, 21.5, 22.5, 18.9, 19.2],
   }]
 };
 
@@ -116,7 +117,7 @@ Chart.defaults.global.defaultFontSize = 18;
 
 var dataFirst = {
     label: "NO2",
-    data: [0, 59, 75, 20, 20, 55, 40],
+    data: [0.5, 0.59, 0.75, 0.20, 0.25, 0.55, 0.40],
     lineTension: 0.3,
     fill: false,
     borderColor: 'red',
@@ -132,7 +133,7 @@ var dataFirst = {
 
 var dataSecond = {
     label: "KH",
-    data: [20, 15, 60, 60, 65, 30, 70],
+    data: [3, 1.5, 5.2, 4.7, 6.5, 3.0, 4.50],
     lineTension: 0.3,
     fill: false,
     borderColor: 'black',
@@ -146,7 +147,7 @@ var dataSecond = {
   };
  var datathird = {
     label: "NO3",
-    data: [10, 12, 50,40, 45, 60, 80],
+    data: [10, 12, 9,9, 7.6, 11, 8.0],
     lineTension: 0.3,
     fill: false,
     borderColor: 'purple',
@@ -160,8 +161,61 @@ var dataSecond = {
   };
 
 var speedData = {
-  labels: ["0 ", "10", "20", "30", "40", "50", "60", "mg/l"],
+  labels: ["01/3", "02/03", "03/03", "04/03", "05/03", "10/03", "20/03"],
   datasets: [dataFirst, dataSecond,datathird]
+};
+
+var chartOptions = {
+  legend: {
+    display: true,
+    position: 'top',
+    labels: {
+      boxWidth: 80,
+      fontColor: 'black'
+    }
+  }
+};
+
+var lineChart = new Chart(speedCanvas, {
+  type: 'line',
+  data: speedData,
+  options: chartOptions
+});
+}
+
+function grafico4(graf){
+	var marksCanvas = document.getElementById(graf);
+
+var marksData = {
+  labels: ["K", "PH", "KH", "NO2", "NO3", "Temperatura"],
+  datasets: [{
+    label: "Valores ideales",
+    backgroundColor: "rgba(200,0,0,0.2)",
+    data: [6.5, 7, 3, 0.1, 10, 20]
+  }, {
+    label: "Student B",
+    backgroundColor: "rgba(0,0,200,0.2)",
+    data: [8, 6,5, 2.8, 0.05, 15, 25]
+  }]
+};
+
+var radarChart = new Chart(marksCanvas, {
+  type: 'radar',
+  data: marksData
+});
+}
+function grafico5(graf, titulo){
+var speedCanvas = document.getElementById(graf);
+
+Chart.defaults.global.defaultFontFamily = "Lato";
+Chart.defaults.global.defaultFontSize = 18;
+
+var speedData = {
+  labels: ["01/3", "02/03", "03/03", "04/03", "05/03", "10/03", "20/03"],
+  datasets: [{
+    label:titulo,
+    data: [6, 5.9, 7.5, 6.4, 5.0, 5.5, 5.2],
+  }]
 };
 
 var chartOptions = {
