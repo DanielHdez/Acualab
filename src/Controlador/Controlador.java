@@ -37,6 +37,12 @@ public class Controlador extends HttpServlet {
 		//PAra servidor remoto
 		this.sql=new SQL("jdbc:mysql://miacuario.ddns.net:3306/acuario","acuario", "12345");
 		
+		//Para el war
+		
+		//this.sql=new SQL("jdbc:mysql://localhost:3306/acuario","acuario", "12345");
+		
+		
+		
 		//Para servidor LAN
 		//this.sql=new SQL("jdbc:mysql://192.168.0.5:3306/acuario","acuario", "12345");
 		
