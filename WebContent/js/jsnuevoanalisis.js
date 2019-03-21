@@ -124,24 +124,22 @@ $(document).ready(function() {
 
 		var resultadotemp = "<br><br><h2><strong>Temperatura </strong> "+temp+" \u00B0 </h2><br>"
 
-		if(temp>18 && temp<=22){
+		if(temp>24 && temp<=28){
 			resultadotemp=resultadotemp+
 			"<p><strong>La temperatura esta perfecta.</strong></p>"
 			
 
-		}else if(temp<18){
+		}else if(temp<24){
 
 			resultadotemp=resultadotemp
 			+"<p style='color:red' ><strong>La temperatura esta muy baja.</strong></p>"
 			+"<p>Deber\u00EDas utilizar un calentador.</p>"
 
-		}else if(temp>22){
+		}else if(temp>28){
 
 			resultadotemp=resultadotemp
 			+"<p style='color:red' ><strong>La temperatura esta muy alta.</strong></p>"
-			+"<p>Para reducir la temperatura podr\u00EDas reducir horas de luz"
-			+" (siempre teniendo en cuenta los requerimientos lum\u00EDnicos m\u00EDnimos"
-			+" de nuestras plantas) o instalar ventiladores en las tapas del acuario.</p>"
+			+"<p>Para reducir la temperatura podr\u00EDas instalar ventiladores en las tapas del acuario.</p>"
 
 		}
 		var temp="<p>Los peces son animales que mantienen la temperatura de su "

@@ -11,6 +11,7 @@
 	<script type="text/javascript" src="js/Chart.js"></script>
 	<script type="text/javascript" src="js/scriptchar.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/cssanalisis.css">
+		<link rel="stylesheet" type="text/css" href="css/csshistorico.css">
 	<link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
 	
 
@@ -18,25 +19,39 @@
 <body>
 	
 	<nav class="navbar navbar-expand-sm ">
-
-		<a class="navbar-brand pl-5" href="iniciousuario.jsp"> <img
-			id="logo" src="imagenes/AQUAlab@3x.png" alt="logo">
-		</a>
-
-		<ul class="navbar-nav  ">
-
-			<li class="nav-item pl-5"><a class="nav-link menu  "
-				href="vennuevoanalisis.jsp"><span>Gráficos</span></a></li>
-
-			<li class="nav-item pl-5"><a class="nav-link menu"
-				href="ventanahistorico.jsp">Historial</a></li>
-			<li class="nav-item pl-5"><a class="nav-link menu"
-				href="ProductosTabla.jsp">Productos</a></li>
-			<li class="nav-item pl-5"><a class="nav-link menu"
-				href="instrucciones.jsp">¿Qué Medir?</a></li>
-		</ul>
+  
+	  <a class="navbar-brand pl-5" href="iniciousuario.jsp">
+	    <img id="logo" src="imagenes/AQUAlab@3x.png" alt="logo" >
+	  </a>
+  
+  	<ul class="navbar-nav  ">
+  	
+	  	<li class="nav-item pl-5">
+	     	 <a class="nav-link menu  " href="vennuevoanalisis.jsp"><span>Nuevo Análisis</span></a>
+	   		</li>
+    	
+   		<li class="nav-item pl-5">
+     	 <a class="nav-link menu" href="ventanahistorico.jsp">Historial</a>
+   		</li>
+    	<li class="nav-item pl-5">
+     	 <a class="nav-link menu" href="ProductosTabla.jsp">Productos</a>
+  		</li>
+  		<li class="nav-item pl-5">
+     	 <a class="nav-link menu" href="instrucciones.jsp">¿Qué Medir?</a>
+  		</li>
+  		<li class="nav-item pl-5"><a class="nav-link menu"
+				href="graficas.jsp">Gráficas</a></li>
+   	 </ul>
 	</nav>
 
+	<div class="row ">
+
+
+			<div class="col-xs-12  mx-auto bienvenido pt-5">
+			<h1 class="bienvenido">Gráficas</h1> 
+	   		</div>
+	      	
+	</div><br><br>
 
 	<div class="row">
 		<div class="col-1"> </div>

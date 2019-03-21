@@ -41,6 +41,8 @@
   		<li class="nav-item pl-5">
      	 <a class="nav-link menu" href="instrucciones.jsp">¿Qué Medir?</a>
   		</li>
+  		<li class="nav-item pl-5"><a class="nav-link menu"
+				href="graficas.jsp">Gráficas</a></li>
    	 </ul>
 	</nav>
 
