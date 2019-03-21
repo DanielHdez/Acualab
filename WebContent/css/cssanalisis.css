@@ -46,7 +46,16 @@ border: none;
   font-size: 45px;
   color:rgba(0, 153, 255);
 }
-
+#scrollUp{
+	
+	bottom:50px;
+	right: 50px;
+	width: 50px;
+	height: 50px;
+	background: url("../imagenes/uparrow.png")  no-repeat;
+	background-size: cover;
+	
+}
 
 
 .text-center2 {

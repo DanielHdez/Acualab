@@ -1,6 +1,3 @@
-
-
-
 function range(){
 	 var a=document.getElementById("temran").value;
 	 document.getElementById("temp").value=a;
