@@ -74,5 +74,12 @@ $(document).ready(function () {
 });
 
 
+$(document).ready(function () {
+    $("#close").click(function () {
+    	alert("hola");
+    	session.invalidate();
+    
+});
+    });
 
 

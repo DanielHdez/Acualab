@@ -26,7 +26,10 @@ nav{
 
   width: 150px;
 }
-
+#botonregistro{
+background-color: transparent;
+border: none;
+}
 .menu{
 
   color: white;

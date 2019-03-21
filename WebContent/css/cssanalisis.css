@@ -25,6 +25,11 @@ nav{
 
   width: 150px;
 }
+#botonregistro{
+background-color: transparent;
+border: none;
+}
+
 
 .textov{
 
@@ -41,6 +46,7 @@ nav{
   font-size: 45px;
   color:rgba(0, 153, 255);
 }
+
 
 
 .text-center2 {
