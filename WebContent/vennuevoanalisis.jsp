@@ -5,6 +5,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script type="text/javascript" src="js/jquery-3.3.1.js"></script>
+<script type="text/javascript" src="js/jquery.scrollUp.js"></script>
 <link rel="shortcut icon" href="imagenes/flat.png">
 <title>Nuevo análisis</title>
 	<link rel="stylesheet" type="text/css"
@@ -16,14 +18,27 @@
 		
 	<script type="text/javascript" src="/js/datatables.min.js"></script>-->
 	
-<script type="text/javascript" src="js/jquery-3.3.1.js"></script>
+
 <script type="text/javascript" src="js/script.js"></script>
 <script type="text/javascript" src="js/ajax1.js"></script>
 <link rel="stylesheet" type="text/css" href="css/cssanalisis.css">
 <link href="https://fonts.googleapis.com/css?family=Poppins"
 	rel="stylesheet">
 <script type="text/javascript" src="js/jsnuevoanalisis.js"></script>
-
+<script type="text/javascript">
+$(function () {
+	  $.scrollUp({
+	    scrollName: 'scrollUp', // Element ID
+	    topDistance: '300', // Distance from top before showing element (px)
+	    topSpeed: 300, // Speed back to top (ms)
+	    animation: 'fade', // Fade, slide, none
+	    animationInSpeed: 200, // Animation in speed (ms)
+	    animationOutSpeed: 200, // Animation out speed (ms)
+	    
+	    activeOverlay: false, // Set CSS color to display scrollUp active point, e.g '#00FFFF'
+	  });
+	});
+</script>
 
 </head>
 <body>
@@ -45,7 +60,19 @@
 				href="ProductosTabla.jsp">Productos</a></li>
 			<li class="nav-item pl-5"><a class="nav-link menu"
 				href="instrucciones.jsp">¿Qué Medir?</a></li>
+			<li class="nav-item pl-5"><a class="nav-link menu"
+				href="graficas.jsp">Gráficas</a></li>
 		</ul>
+		
+	    <ul class="nav navbar-nav navbar-right derechaaa">
+	    	<li class="nav-item pl-5"></li><li class="nav-item pl-5"></li><li class="nav-item pl-5"></li><li class="nav-item pl-5"></li>
+	    	<li class="nav-item pl-5"></li><li class="nav-item pl-5"></li><li class="nav-item pl-5"></li>
+	    	<li class="nav-item pl-5"></li><li class="nav-item pl-5"></li><li class="nav-item pl-5"></li>
+	    	<li class="nav-item pl-5"></li><li class="nav-item pl-5"></li><li class="nav-item pl-5"></li>
+	    	<li class="nav-item pl-5"></li><li class="nav-item pl-5"></li><li class="nav-item pl-5"></li>
+	      
+	      <li><a title="Cerrar sesión" id="botonregistro" href="CerrarSesion"><img src="imagenes/user2.png"></a>
+	    </ul>
 	</nav>
 
 	<div class="row">

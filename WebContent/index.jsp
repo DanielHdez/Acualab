@@ -82,7 +82,7 @@
 		</div>
 		
 		<div class="col-sm-6  pl-5 textoo">
-			<p>No sirve saber que ”todo esta bien”, esto no indica si el pH esta a 5,5 o a 7. Siempre debemos conocer en que valores se mueve el agua de nuestro acuario</p>	
+			<p>No sirve saber que todo esta bien, esto no indica si el pH esta a 5,5 o a 7. Siempre debemos conocer en que valores se mueve el agua de nuestro acuario</p>	
 				<p>A la hora de introducir  los peces debemos conocer los  parámetros ya que cada especie tiene unas necesidades de calidad de agua, y sobre todo debemos conocer como varían a lo largo del tiempo, ya que esto nos indica si estamos manteniendo el acuario correctamente o no.</p>
 			
 			</div>
@@ -110,7 +110,7 @@
     		    	
     	
     	
-     	 <input type="text" placeholder="Enter Username" name="nombre">
+     	 <input type="text" placeholder="Enter Email" name="nombre">
      	 <input type="password" placeholder="Enter Password" name="password">        
    		
 		<button formaction= "acceso" class="container1" type="submit">Enviar</button>

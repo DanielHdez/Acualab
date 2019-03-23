@@ -54,9 +54,9 @@ public class RegistroUsurio extends HttpServlet {
 			sesion.setAttribute("nval", "correcto");
 			sesion.setAttribute("pval", "correcto");
 							
-			salida.append("<p> Usuario registrado con éxito </p><br><a href=\"Controlador\">Ir a home</a>");
+			salida.append("<p id='parrafo'> Usuario registrado con exito </p><br><a href=\"Controlador\">Ir a home</a>");
 		}else {
-			salida.append("<p>El usuario ya existe</p>");
+			salida.append("<p id='parrafo' >El usuario ya existe</p>");
 		}
 
 	}
