@@ -8,9 +8,6 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
 import javax.persistence.TypedQuery;
-import javax.servlet.ServletContext;
-import javax.servlet.http.HttpSession;
-
 import model.Analisi;
 import model.Producto;
 import model.Usuario;
