@@ -1,6 +1,3 @@
-
-
-
 function range(){
 	 var a=document.getElementById("temran").value;
 	 document.getElementById("temp").value=a;
@@ -16,6 +13,7 @@ function cambiar(prop,cambi){
 	 document.getElementById(cambi).value=a;
 	 
 }
+
 $(document).ready(function () {
 $('#mitabla').DataTable({
 "scrollY": "400px",
@@ -24,4 +22,5 @@ $('#mitabla').DataTable({
 });
 $('.dataTables_length').addClass('bs-select');
 });
+
 

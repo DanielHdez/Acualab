@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="UTF-8"%>
- <%@ page import= "Conector.Jpa" %> 
+ <%@ page import= "conector.Jpa" %> 
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -36,7 +36,18 @@
   		<li class="nav-item pl-5">
      	 <a class="nav-link menu" href="instrucciones.jsp">¿Qué Medir?</a>
   		</li>
+  		<li class="nav-item pl-5"><a class="nav-link menu"href="graficas.jsp">Gráficas</a></li>
    	 </ul>
+   	 
+   	 <ul class="nav navbar-nav navbar-right derechaaa">
+	    	<li class="nav-item pl-5"></li><li class="nav-item pl-5"></li><li class="nav-item pl-5"></li><li class="nav-item pl-5"></li>
+	    	<li class="nav-item pl-5"></li><li class="nav-item pl-5"></li><li class="nav-item pl-5"></li>
+	    	<li class="nav-item pl-5"></li><li class="nav-item pl-5"></li><li class="nav-item pl-5"></li>
+	    	<li class="nav-item pl-5"></li><li class="nav-item pl-5"></li><li class="nav-item pl-5"></li>
+	    	<li class="nav-item pl-5"></li><li class="nav-item pl-5"></li><li class="nav-item pl-5"></li>
+	      
+	      <li><a title="Cerrar sesión" id="botonregistro" href="CerrarSesion"><img src="imagenes/user2.png"></a>
+	    </ul>
 	</nav>
 
 	<div class="row ">

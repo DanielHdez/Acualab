@@ -8,7 +8,7 @@
 <meta charset="UTF-8">
 <title>Registro</title>
 <link rel="shortcut icon" href="imagenes/flat.png">
-<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="js/jquery-3.3.1.js"></script>
 <script type="text/javascript" src="js/script1.js"></script>
 <script type="text/javascript" src="js/ajax1.js"></script>
 <link rel="stylesheet" type="text/css" href="css/boot/bootstrap.css">

@@ -43,8 +43,8 @@ public class Controlador extends HttpServlet {
 		
 		
 		//Para servidor LAN
-		this.sql=new SQL("jdbc:mysql://192.168.0.5:3306/acuario","acuario", "12345");
-		
+		//this.sql=new SQL("jdbc:mysql://192.168.1.5:3306/acuario","acuario", "12345");
+		this.sql=new SQL("jdbc:mysql://localhost:3306/acuario?useUnicode=true&characterEncoding=utf8&useSSL=false&useLegacyDatetimeCode=false&serverTimezone=UTC","acuario", "12345");
 		//Genero el contexto de la aplicacion y genero un atributo disponible en toda la aplicacion en la vida del servlet
 		//dicho objeto es sql que tiene parametros de conexion
 		
